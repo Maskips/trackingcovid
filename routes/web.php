@@ -34,11 +34,20 @@ Route::get('admin', function(){
     return view('utama');
 });
 
-//PROVINSI
-// Route::group(['prefix' => 'admin','middleware'=>['auth']], function() {
-//     Route::resource('provinsi', ProvinsiController::class);
-// });
 
+
+
+//DROPDOWN
+use App\Http\Controllers\DependentDropdownController;
+Route::resource('dropdown', DependentDropdownController::class);
+
+// Route::get('dependent-dropdown', 'DependentDropdownController@index')
+//     ->name('dependent-dropdown.index');
+
+// Route::post('dependent-dropdown', 'DependentDropdownController@store')
+//     ->name('dependent-dropdown.store');
+
+//PROVINSI
 use App\Http\Controllers\ProvinsiController;
 Route::resource('provinsi', ProvinsiController::class);
 

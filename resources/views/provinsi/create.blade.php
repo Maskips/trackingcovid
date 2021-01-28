@@ -16,8 +16,16 @@
                         @endif 
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Nama Provinsi</label>
-                        <input type="text" name="nama_provinsi" class="form-control" id="exampleInputPassword1">
+                    <!-- <label for="" >Nama Provinsi</label>
+                    <select name="province" id="" class="form-control">
+                        <option value="">Pilih Provinsi</option>
+                        @foreach ($provinces as $data)
+                        <option value="{{$data->id}}">{{ $data->name }}</option>
+                        @endforeach
+                    </select> -->
+
+                    <label for="" >Nama Provinsi</label>
+                        <input type="text" name="nama_provinsi" class="form-control" id="exampleInputEmail1">
                         @if($errors->has('nama_provinsi'))
                             <span class="text-danger">{{ $errors->first('nama_provinsi') }}</span>
                         @endif

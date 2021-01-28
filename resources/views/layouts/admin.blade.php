@@ -29,7 +29,6 @@
     </head>
 
     <body>
-
         <div class="main-content">
             <div class="container-fluid">
                 @include('layouts.app')

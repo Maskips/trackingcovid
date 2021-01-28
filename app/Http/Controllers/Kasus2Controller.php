@@ -33,10 +33,10 @@ class Kasus2Controller extends Controller
     {
         //VALIDASI
         $request->validate([
-            'jpositif' => 'required|max:6|unique:kasus2s',
-            'jmeninggal' => 'required|max:6|unique:kasus2s',
-            'jsembuh' => 'required|max:6|unique:kasus2s',
-            'tanggal' => 'required|max:6|unique:kasus2s',
+            'jpositif' => 'required|max:6:kasus2s',
+            'jmeninggal' => 'required|max:6:kasus2s',
+            'jsembuh' => 'required|max:6:kasus2s',
+            'tanggal' => 'required:kasus2s',
         ], [
             'jpositif.required' => 'Jumlah Harus Di Isi',
             'jpositif.max' => 'Jumlah Maksimal 6 Nomer',
