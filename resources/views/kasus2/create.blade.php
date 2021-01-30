@@ -9,6 +9,9 @@
                 <div class="card-body">
                 <form action="{{route('kasus2.store')}}" method="POST">
                 @csrf
+                <div class="flex flex-col justify-around h-full">
+                @livewire('dropdowns')
+                </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Positif</label>
                         <input type="number" name="jpositif" class="form-control" id="exampleInputPassword1">
@@ -37,13 +40,6 @@
                             <span class="text-danger">{{ $errors->first('tanggal') }}</span>
                         @endif
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Nama Rw</label>
-                        <select name="id_rw" class="form-control" id="">
-                        @foreach ($rw as $data)
-                            <option value="{{$data->id}}">{{$data->nama_rw}}</option>
-                        @endforeach
-                        </select>
                     </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

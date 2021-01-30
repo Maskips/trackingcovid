@@ -10,8 +10,8 @@
                 <form action="{{route('rw.store')}}" method="POST">
                 @csrf
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Nama Rw</label>
-                        <input type="text" name="nama_rw" class="form-control" id="exampleInputPassword1">
+                        <label for="exampleInputPassword1" class="form-label">Rw</label>
+                        <input type="number" name="nama_rw" class="form-control" id="exampleInputPassword1">
                         @if($errors->has('nama_rw'))
                             <span class="text-danger">{{ $errors->first('nama_rw') }}</span>
                         @endif

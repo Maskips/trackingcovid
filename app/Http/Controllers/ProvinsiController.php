@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Provinsi;
-use App\Http\Controllers\DependentDropdown;
 use App\Http\Controllers\DB;
-use Laravolt\Indonesia\Models\Province;
 
 
 class ProvinsiController extends Controller
@@ -24,8 +22,7 @@ class ProvinsiController extends Controller
     public function create()
     {
         $provinsi = Provinsi::all();
-        $provinces = Province::all();
-        return view('provinsi.create', compact('provinsi', 'provinces'));
+        return view('provinsi.create', compact('provinsi'));
     }
 
     public function store(Request $request)

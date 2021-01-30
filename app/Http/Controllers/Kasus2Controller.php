@@ -24,8 +24,7 @@ class Kasus2Controller extends Controller
     public function create()
     {
         $rw = Rw::all();
-        $kasus2 = Kasus2::all();
-        return view('kasus2.create', compact('kasus2', 'rw'));
+        return view('kasus2.create', compact('rw'));
     }
 
     

@@ -34,18 +34,8 @@ Route::get('admin', function(){
     return view('utama');
 });
 
-
-
-
 //DROPDOWN
-use App\Http\Controllers\DependentDropdownController;
-Route::resource('dropdown', DependentDropdownController::class);
-
-// Route::get('dependent-dropdown', 'DependentDropdownController@index')
-//     ->name('dependent-dropdown.index');
-
-// Route::post('dependent-dropdown', 'DependentDropdownController@store')
-//     ->name('dependent-dropdown.store');
+Route::view('states-city','livewire.home');
 
 //PROVINSI
 use App\Http\Controllers\ProvinsiController;

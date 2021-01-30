@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateKasus2sTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('kasus2s', function (Blueprint $table) {
@@ -26,11 +21,6 @@ class CreateKasus2sTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('kasus2s');
