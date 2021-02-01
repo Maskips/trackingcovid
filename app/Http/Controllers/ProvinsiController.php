@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Laravolt\Indonesia\Models\Province;
 use Illuminate\Http\Request;
 use App\Models\Provinsi;
 use App\Http\Controllers\DB;
