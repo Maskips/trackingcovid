@@ -17,5 +17,5 @@ Route::post('provinsi', [ProvinsiController::class, 'store']);
 Route::get('provinsi{id}', [ProvinsiController::class, 'show']);
 Route::delete('provinsi{id}', [ProvinsiController::class, 'destroy']);
 
-Route::get('rw', [ApiController::class, 'index']);
+Route::get('seluruh', [ApiController::class, 'index']);
 Route::get('join/{id}', [ApiController::class, 'show']);
