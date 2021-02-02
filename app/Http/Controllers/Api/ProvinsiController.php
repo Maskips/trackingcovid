@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Provinsi;
+use App\Models\Kasus2;
 
 class ProvinsiController extends Controller
 {
@@ -74,12 +75,13 @@ class ProvinsiController extends Controller
             return response()->json([
                 'success' => true,
                 'data'    => $provinsi,
-                'message' => 'Data Provinsi Dihapus'
+                'message' => 'Data Provinsi Dihapus',
             ], 200);
-        } else {
+        }
+        else {
             return response()->json([
                 'success' => false,
-                'message' => 'Data Gagal Dihapus'
+                'message' => 'Data Gagal Dihapus',
             ], 200);
         }
     }

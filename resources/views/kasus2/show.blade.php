@@ -8,7 +8,11 @@
 
                 <div class="card-body">
                 @csrf
-                
+                <div class="mb-3" readonly>
+                @livewire('dropdowns', ['selectedRw'=>$kasus2->id_rw, 'selectedKelurahan'=>$kasus2->rw->id_kelurahan,
+                'selectedKecamatan'=>$kasus2->rw->kelurahan->id_kecamatan, 'selectedKota'=>$kasus2->rw->kelurahan->kecamatan->id_kota,
+                'selectedProvinsi'=>$kasus2->rw->kelurahan->kecamatan->kota->id_provinsi])
+                </div>    
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Positif</label>
                         <input type="number" name="jpositif" value="{{$kasus2->jpositif}}" class="form-control" readonly>
