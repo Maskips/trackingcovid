@@ -25,8 +25,6 @@ class ApiController extends Controller
             ->join('rws', 'rws.id_kelurahan', '=', 'kelurahans.id')
             ->join('kasus2s', 'kasus2s.id_rw', '=', 'rws.id')
             ->select('nama_provinsi', 'kode_provinsi',
-                DB::raw('sum(provinsis.nama_provinsi) as nama_provinsi'),
-                DB::raw('sum(provinsis.kode_provinsi) as kode_provinsi'),
                 DB::raw('sum(kasus2s.jpositif) as jpositif'),
                 DB::raw('sum(kasus2s.jsembuh) as jsembuh'),
                 DB::raw('sum(kasus2s.jmeninggal) as jmeninggal'))
