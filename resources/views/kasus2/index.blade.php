@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card-header"><b>TABEL KASUS2<b></div>
 
                 <div class="card-body">
@@ -17,6 +17,7 @@
                       <thead>
                         <tr>
                           <th scope="col">ID</th>
+                          <th scope="col">PROVINSI</th>
                           <th scope="col">POSITIF</th>
                           <th scope="col">MENINGGAL</th>
                           <th></th>
@@ -31,6 +32,7 @@
                       @foreach ( $kasus2 as $data )
                       <tr>
                       <th scope="row">{{ $no++ }}</th>
+                        <td>{{ $data->rw->kelurahan->kecamatan->kota->provinsi->nama_provinsi }}</td>
                         <td>{{ $data->jpositif }}</td>
                         <td>{{ $data->jmeninggal }}<td>
                         <td>{{ $data->jsembuh }}<td>

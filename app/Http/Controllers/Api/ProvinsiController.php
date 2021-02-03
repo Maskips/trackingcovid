@@ -40,6 +40,25 @@ class ProvinsiController extends Controller
         return response()->json($res, 200);
     }
 
+    public function provinsi($id) 
+    {
+        $provinsi = Provinsi::whereId($id)->first();
+
+        if ($provinsi) {
+            return response()->json([
+                'success' => true,
+                'Total Data Kasus'    => $provinsi->sum('kasus2.jpositif'),
+                'message' => 'Data Kasus Sesuai Id Provinsi',
+            ], 200);
+        } else {
+            return response()->json([
+                'success' => false,
+                'data'    => $provinsi,
+                'message' => 'Data Kasus Sesuai Id Provinsi Tidak Ditemukan!',
+            ], 401);
+        }
+    }
+
     public function create()
     {
         //
@@ -66,8 +85,8 @@ class ProvinsiController extends Controller
         if ($provinsi) {
             return response()->json([
                 'status' => true,
-                'Total Data Kota' => $provinsi->kota->count(),
-                'Total Data positif' => $provinsi->kota->count(),
+                'Total Data Kota' => $provinsi->count(),
+                'Total Data positif' => $provinsi->count(),
                 'data' => $provinsi,
                 'message' => '^ isi post ^'
             ],200);
