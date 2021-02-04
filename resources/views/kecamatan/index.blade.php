@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card-header"><b>TABEL KECAMATAN<b></div>
 
                 <div class="card-body">
@@ -12,8 +12,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="{{route('kecamatan.create')}}" class="btn btn-primary btn-small float-right" type="submit"><b>Tambah Data</b></a>
-                    <table class="table">
+                  <a href="{{route('kecamatan.create')}}" class="btn btn-primary btn-small float-right" type="submit"><b>Tambah Data</b></a>
+                  <div class="card-body">
+                  <div class="table-responsive">
+                  <table class="table">
                       <thead>
                         <tr>
                           <th scope="col">ID</th>
