@@ -15,16 +15,14 @@
                   <a href="{{route('kasus2.create')}}" class="btn btn-primary btn-small float-right" type="submit"><b>Tambah Data</b></a>
                   <div class="card-body">
                   <div class="table-responsive">
-                  <table class="table">
+                  <table class="table table-bordered" id="datatable">
                       <thead>
                         <tr>
                           <th scope="col">ID</th>
                           <th scope="col">LOKASI</th>
                           <th scope="col">POSITIF</th>
                           <th scope="col">MENINGGAL</th>
-                          <th></th>
                           <th scope="col">SEMBUH</th>
-                          <th></th>
                           <th scope="col">TANGGAL</th>
                           <th scope="col">ACTION</th>
                         </tr>
@@ -41,10 +39,11 @@
                         <a>Kel : </a>{{ $data->rw->kelurahan->nama_kelurahan }} <br>
                         <a>Rw : </a>{{ $data->rw->nama_rw }} 
                         </td>
-                        <td>{{ $data->jpositif }}</td>
-                        <td>{{ $data->jmeninggal }}<td>
-                        <td>{{ $data->jsembuh }}<td>
-                        <td>{{ $data->tanggal }}<td>
+                        <th>{{ $data->jpositif }}</th>
+                        <th>{{ $data->jmeninggal }}</th>
+                        <th>{{ $data->jsembuh }}</th>
+                        <th>{{ $data->tanggal }}</th>
+                        <th>
                         <form action="{{route('kasus2.destroy', $data->id)}}" method="POST">
                           <!-- <a href="{{route('kasus2.show', $data->id)}}" class="btn btn-warning">Show</a> -->
                           <a href="{{route('kasus2.edit', $data->id)}}" class="btn btn-primary">Edit</a>
@@ -52,7 +51,7 @@
                           @method('DELETE')
                           <button type="submit" onclick="return confirm('Apakah Anda Yakin ?')" class="btn btn-danger">Delete</button>
                         </form>
-                        </td>
+                        </th>
                       </tr>
                       @endforeach
                     </tbody>

@@ -25,6 +25,8 @@
         <link rel="stylesheet" href="{{asset('assets/plugins/owl.carousel/dist/assets/owl.carousel.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/owl.carousel/dist/assets/owl.theme.default.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/dist/css/theme.min.css')}}">
+        <!-- Datatables-->
+        <link rel="stylesheet" href="{{asset('assets/datatables/datatable.min.css')}}">
         <script src="{{asset('assets/src/js/vendor/modernizr-2.8.3.min.js')}}"></script>
         
         @livewireStyles
@@ -141,6 +143,16 @@
         <script src="{{asset('assets/js/widgets.js')}}"></script>
         <script src="{{asset('assets/js/charts.js')}}"></script>
         <script src="{{asset('assets/dist/js/theme.min.js')}}"></script>
+        
+        <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+        
+        <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables/js"></script>
+        @yield('js')
+            <script>
+                $(document).ready( function () {
+                    $('#datatable').DataTable();
+                });
+            </script>
         @livewireScripts
     </body>
 </html>

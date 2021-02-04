@@ -15,7 +15,7 @@
                   <a href="{{route('rw.create')}}" class="btn btn-primary btn-small float-right" type="submit"><b>Tambah Data</b></a>
                   <div class="card-body">
                   <div class="table-responsive">
-                  <table class="table">
+                  <table class="table table-bordered" id="datatable">
                       <thead>
                         <tr>
                           <th scope="col">ID</th>
