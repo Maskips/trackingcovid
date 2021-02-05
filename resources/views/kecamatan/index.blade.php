@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-13">
             <div class="card-header"><b>TABEL KECAMATAN<b></div>
 
                 <div class="card-body">
@@ -34,7 +34,7 @@
                         <td>{{ $data->nama_kecamatan }}</td>
                         <td>{{ $data->kota->nama_kota }}<td>
                         <form action="{{route('kecamatan.destroy', $data->id)}}" method="POST">
-                          <a href="{{route('kecamatan.show', $data->id)}}" class="btn btn-warning">Show</a>
+                          <!-- <a href="{{route('kecamatan.show', $data->id)}}" class="btn btn-warning">Show</a> -->
                           <a href="{{route('kecamatan.edit', $data->id)}}" class="btn btn-primary">Edit</a>
                           @csrf
                           @method('DELETE')

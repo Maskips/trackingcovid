@@ -159,6 +159,8 @@ class ApiController extends Controller
             'jmeninggal' => $kips->sum('jmeninggal'),
         ];
         
+        
+
         $arr = [
             'Status'    => 200,
             'Data'      => [ 

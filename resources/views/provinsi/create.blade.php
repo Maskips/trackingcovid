@@ -22,7 +22,7 @@
                             <span class="text-danger">{{ $errors->first('nama_provinsi') }}</span>
                         @endif 
                     </div>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="submit" class="btn btn-dark">SIMPAN</button>
                 </form>
                 </div>
             </div>    

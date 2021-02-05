@@ -34,7 +34,7 @@
                         <td>{{ $data->nama_provinsi }}</td>
                         <td>
                         <form action="{{route('provinsi.destroy', $data->id)}}" method="POST">
-                          <a href="{{route('provinsi.show', $data->id)}}" class="btn btn-warning">Show</a>
+                          <!-- <a href="{{route('provinsi.show', $data->id)}}" class="btn btn-warning">Show</a> -->
                           <a href="{{route('provinsi.edit', $data->id)}}" class="btn btn-primary">Edit</a>
                           @csrf
                           @method('DELETE')

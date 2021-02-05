@@ -35,7 +35,7 @@
                         <td>{{ $data->nama_kelurahan }}<td>
                         <td>{{ $data->kecamatan->nama_kecamatan }}<td>
                         <form action="{{route('kelurahan.destroy', $data->id)}}" method="POST">
-                          <a href="{{route('kelurahan.show', $data->id)}}" class="btn btn-warning">Show</a>
+                          <!-- <a href="{{route('kelurahan.show', $data->id)}}" class="btn btn-warning">Show</a> -->
                           <a href="{{route('kelurahan.edit', $data->id)}}" class="btn btn-primary">Edit</a>
                           @csrf
                           @method('DELETE')

@@ -32,7 +32,7 @@
                         <td>{{ $data->nama_rw }}</td>
                         <td>{{ $data->kelurahan->nama_kelurahan }}<td>
                         <form action="{{route('rw.destroy', $data->id)}}" method="POST">
-                          <a href="{{route('rw.show', $data->id)}}" class="btn btn-warning">Show</a>
+                          <!-- <a href="{{route('rw.show', $data->id)}}" class="btn btn-warning">Show</a> -->
                           <a href="{{route('rw.edit', $data->id)}}" class="btn btn-primary">Edit</a>
                           @csrf
                           @method('DELETE')
