@@ -12,7 +12,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                  <a href="{{route('kelurahan.create')}}" class="btn btn-primary btn-small float-right" type="submit"><b>Tambah Data</b></a>
+                  <a href="{{route('kelurahan.create')}}" class="btn btn-primary btn-small float-right" type="submit"><b>Tambah Data</b></a><br><br>
                   <div class="card-body">
                   <div class="table-responsive">
                   <table class="table table-bordered" id="datatable">

@@ -11,6 +11,7 @@ use App\Models\Kota;
 use App\Models\Kecamatan;
 use App\Models\Kelurahan;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 
 class ApiController extends Controller
 {
@@ -38,6 +39,18 @@ class ApiController extends Controller
                 'Message'                   => 'Data Kasus Ditampilkan'
             ];
         return response()->json($res, 200);
+    }
+
+    //BERDASARKAN DATA API GLOBAL
+    public function global() 
+    {
+        $response = Http::get('https://api.kawalcorona.com/')->json();
+        $data = [
+            'succes'    => true,
+            'Data Api Global'   => $response,
+            'Message'           => 'Data Api Global Ditampilkan'        
+        ];
+        return response()->json($data, 200);
     }
 
     //BERDASARKAN KASUS DARI TIAP PROVINSI

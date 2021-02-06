@@ -27,3 +27,4 @@ Route::get('kota', [ApiController::class, 'kota']);
 Route::get('kecamatan', [ApiController::class, 'kecamatan']);
 Route::get('kelurahan', [ApiController::class, 'kelurahan']);
 Route::get('today', [ApiController::class, 'today']);
+Route::get('global',[ApiController::class, 'global']);
