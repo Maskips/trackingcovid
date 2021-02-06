@@ -1,4 +1,4 @@
-<header class="header-top" header-theme="light">
+<!-- <header class="header-top" header-theme="light">
     <div class="container-fluid">
         <div class="d-flex justify-content-between">
             <div class="top-menu d-flex align-items-center">
@@ -40,4 +40,4 @@
             </div>
         </div>
     </div>
-</header>
+</header> -->

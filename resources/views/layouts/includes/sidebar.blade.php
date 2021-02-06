@@ -1,9 +1,6 @@
-<div class="app-sidebar colored">
+<!-- <div class="app-sidebar colored">
     <div class="sidebar-header">
         <a class="header-brand" href="index.html">
-            <!-- <div class="logo-img">
-                <img src="{{asset('assets/src/img/brand-white.svg')}}" class="header-brand-img" alt="lavalite"> 
-            </div> -->
             <span class="text">TrackingCovid</span>
         </a>
         <button type="button" class="nav-toggle"><i data-toggle="expanded" class="ik ik-toggle-right toggle-icon"></i></button>
@@ -35,4 +32,4 @@
             </div>
         </nav>
     </div>
-</div>
+</div> -->

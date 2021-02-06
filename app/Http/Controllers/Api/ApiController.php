@@ -46,12 +46,38 @@ class ApiController extends Controller
     {
         $response = Http::get('https://api.kawalcorona.com/')->json();
         $data = [
-            'succes'    => true,
+            'Success'            => true,
             'Data Api Global'   => $response,
             'Message'           => 'Data Api Global Ditampilkan'        
         ];
         return response()->json($data, 200);
     }
+
+    //BERDASARKAN DATA API GLOBAL (ID, NAMA NEGARA, POSITIF, NEGATIF, MENINGGAL)
+    public function global2() 
+    {        
+        $response = Http::get('https://api.kawalcorona.com/')->json();
+        $data = [];
+        foreach ($response as $key => $value) {
+            $ul = $value['attributes'];
+            $res = [
+                'id '=>$ul['OBJECTID'],
+                'Country'=>$ul['Country_Region'],
+                'Confirmed'=>$ul['Confirmed'],
+                'Deaths'=>$ul['Deaths'],
+                'Recovered'=>$ul['Recovered'],
+            ];
+            array_push($data,$res);
+ 
+        }
+        $response = [
+            'success' => true,
+            'country' =>$data,
+            'message'=> ' Data berhasil ditampilkan',
+        ];
+        return response()->json($response,200);
+ 
+     }
 
     //BERDASARKAN KASUS DARI TIAP PROVINSI
     public function provinsi() 
