@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8"> 
+        <div class="col-md-12"> 
             <div class="card-header"><b>CREATE DATA PROVINSI<b></div>
                 <div class="card-body">
                 <form action="{{route('provinsi.store')}}" method="POST">

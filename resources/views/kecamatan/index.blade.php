@@ -5,14 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-13">
             <div class="card-header"><b>TABEL KECAMATAN<b></div>
-
                 <div class="card-body">
+                <a href="{{route('kecamatan.create')}}" type="submit"><b>Tambah Data</b></a>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
-                  <a href="{{route('kecamatan.create')}}" class="btn btn-primary btn-small float-right" type="submit"><b>Tambah Data</b></a><br><br>
                   <div class="card-body">
                   <div class="table-responsive">
                   <table class="table table-bordered" id="datatable">

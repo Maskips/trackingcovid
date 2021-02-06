@@ -5,14 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card-header"><b>TABEL KOTA<b></div>
-
                 <div class="card-body">
+                <a href="{{route('kota.create')}}" type="submit"><b>Tambah Data</b></a>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
-                  <a href="{{route('kota.create')}}" class="btn btn-primary btn-small float-right" type="submit"><b>Tambah Data</b></a><br><br>
                   <div class="card-body">
                   <div class="table-responsive">
                   <table class="table table-bordered" id="datatable">

@@ -6,14 +6,13 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card-header"><b>TABEL PROVINSI<b></div>
-
                 <div class="card-body">
+                <a href="{{route('provinsi.create')}}" type="submit"><b>TAMBAH DATA</b></a>
                     @if (session('message'))
                         <div class="alert alert-success" role="alert">
                             {{ session('message') }}
                         </div>
                     @endif
-                  <a href="{{route('provinsi.create')}}" class="btn btn-primary btn-small float-right" type="submit"><b>Tambah Data</b></a><br><br>
                   <div class="card-body">
                   <div class="table-responsive" >
                   <table class="table table-bordered" id="datatable">
