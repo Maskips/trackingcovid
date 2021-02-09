@@ -1,21 +1,20 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card-header"><b>TABEL KASUS2<b></div>
-                <div class="card-body">
-                <a href="{{route('kasus2.create')}}" type="submit"><b>Tambah Data</b></a>
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                  <div class="card-body">
-                  <div class="table-responsive">
-                  <table class="table table-bordered" id="datatable">
-                      <thead>
+<div class="row">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header"><h3><b>TABEL KASUS2<b></h3></div>
+          <div class="card-body">
+          <a href="{{route('kasus2.create')}}" type="submit"><b>TAMBAH DATA</b></a>
+            @if (session('message'))
+              <div class="alert alert-success" role="alert">
+              {{ session('message') }}
+              </div>
+            @endif
+            <div class="table-responsive">
+            <table id="data_table" class="table">
+              <thead class="theme-dark">
                         <tr>
                           <th scope="col">ID</th>
                           <th scope="col">LOKASI</th>

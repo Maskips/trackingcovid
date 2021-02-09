@@ -27,6 +27,13 @@
         <link rel="stylesheet" href="{{asset('assets/dist/css/theme.min.css')}}">
         <script src="{{asset('assets/src/js/vendor/modernizr-2.8.3.min.js')}}"></script>
         <!-- Datatables-->
+        <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap/dist/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/plugins/ionicons/dist/css/ionicons.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/plugins/icon-kit/dist/css/iconkit.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/dist/css/theme.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/datatables/datatable.min.css')}}">
         <script src="{{asset('assets/src/js/vendor/modernizr-2.8.3.min.js')}}"></script>
         
@@ -35,7 +42,7 @@
 
     <body>
         <div class="wrapper">
-            <header class="header-top" header-theme="light">
+            <header class="header-top" header-theme="dark">
                 <div class="container-fluid">
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">
@@ -81,43 +88,31 @@
                     <div class="sidebar-content">
                         <div class="nav-container">
                             <nav id="main-menu-navigation" class="navigation-main">
-                                <div class="nav-lavel">Form Kasus</div>
-                                    <div class="nav-item has-sub">
-                                        <a href="#"><i class="ik ik-menu"></i><span>Local</span></a>
-                                        <div class="submenu-content">
-                                            <a href="provinsi" class="menu-item">Provinsi</a>
-                                            <a href="kota" class="menu-item">Kota</a>
-                                            <a href="kecamatan" class="menu-item">Kecamatan</a>
-                                            <a href="kelurahan" class="menu-item">Kelurahan</a>
-                                            <a href="rw" class="menu-item">Rw</a>
-                                            <a href="kasus2" class="menu-item">Kasus2</a>
-                                        </div>
-                                        <a href="#"><i class="ik ik-menu"></i><span>Global</span></a>
-                                        <div class="submenu-content">
-                                            <a href="negara" class="menu-item">Negara</a>
-                                            <a href="kasus" class="menu-item">Kasus</a>
-                                        </div>
-                                    </div>
+                                <div class="nav-lavel"><a><span>LOCAL</span></a></div>
+                                <div class="nav-item">
+                                    <a href="provinsi" class="ik ik-layers">  Provinsi</a>
+                                    <a href="kota" class="ik ik-layers">  Kota</a>
+                                    <a href="kecamatan" class="ik ik-layers">  Kecamatan</a>
+                                    <a href="kelurahan" class="ik ik-layers">  Kelurahan</a>
+                                    <a href="rw" class="ik ik-layers">  Rw</a>
+                                    <a href="kasus2" class="ik ik-layers">  Kasus2</a>                    
+                                </div>
+                                <div class="nav-lavel"><a><span>GLOBAL</span></a></div>
+                                <div class="nav-item">
+                                    <a href="negara" class="ik ik-layers">  Negara</a>
+                                    <a href="kasus" class="ik ik-layers">  Kasus</a>
+                                </div>
                             </nav>
                         </div>
                     </div>
                 </div>
                 <div class="main-content">
                     <div class="container-fluid">
-                    @include('layouts.app')
-                        <!-- <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+                        
+                        @include('layouts.app')
                     </div>
                 </div>
+            
                 <footer class="footer">
                     <div class="w-100 clearfix">
                         <span class="text-center text-sm-left d-md-inline-block">Copyright © 2018 ThemeKit v2.0. All Rights Reserved.</span>
@@ -147,7 +142,10 @@
         <script src="{{asset('assets/js/widgets.js')}}"></script>
         <script src="{{asset('assets/js/charts.js')}}"></script>
         <script src="{{asset('assets/dist/js/theme.min.js')}}"></script>
-        
+        <script src="{{asset('assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+        <script src="{{asset('assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+        <script src="{{asset('assets/dist/js/theme.min.js')}}"></script>
+        <script src="{{asset('assets/js/datatables.js')}}"></script>
         <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
         
         <script type="text/javascript" charset="utf8" src="{{asset('assets///cdn.datatables.net/1.10.16/js/jquery.dataTables/js')}}"></script>
