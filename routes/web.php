@@ -3,8 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.welcome');
 });
+
+//FRONTEND
+use App\Http\Controllers\WelcomeController;
+Route::resource('/', WelcomeController::class);
 
 Auth::routes();
 

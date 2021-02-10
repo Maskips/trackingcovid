@@ -126,7 +126,7 @@
     <h1>404</h1>
     <h4>Page Not Found</h4>
     <p>Maaf halaman yang anda inginkan tidak dapat kami akses... Cobalah untuk mengecek parameter dengan benar</p>
-    <a href="admin">Kembali ke Home</a>
+    <a href="frontend.welcome">Kembali ke Home</a>
 </body>
 </html>
 <!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
