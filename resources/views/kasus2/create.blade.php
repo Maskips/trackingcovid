@@ -12,6 +12,11 @@
                 <div class="flex flex-col justify-around h-full">
                 @livewire('dropdowns')
                 </div>
+                    <br>
+                    <div class="mb-3">
+                        <label for="" class="form-label"><h4><b>TOTAL KASUS LOCAL</b></h4></label>
+                    </div>
+                    <br>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Positif</label>
                         <input type="number" name="jpositif" class="form-control" id="exampleInputPassword1">

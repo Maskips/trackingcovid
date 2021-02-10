@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
-@section('content')
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Sign Up | ThemeKit - Admin Template</title>
+        <title>Daftar | TrackingKopid </title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,70 +37,55 @@
                             <div class="logo-centered">
                                 <a href="#"><img src="{{asset('assets/src/img/brand.svg')}}" alt=""></a>
                             </div>
-                            <h3>Register to TrackingKopid</h3>
-                            <p>Bergabung hari ini ! Ini tinggal beberapa langkah lagi</p>
-                            <form action="{{route('register')}}" method="post">
+                        <h3>Daftar ke TrackingKopid</h3>
+                    <form action="{{route('register')}}" method="post">
                         @csrf
-                        <div class="input-group mb-3">
-                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Full name">
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                <span class="fas fa-user"></span>
-                            </div>
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Nama Lengkap" required="">
+                            <i class="ik ik-user"></i>
                         </div>
                         @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email">
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
-                            </div>
+                        <div class="form-group">
+                            <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email" required="">
+                            <i class="ik ik-user"></i>
                         </div>
                         @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
-                    </div>
-        <div class="input-group mb-3">
-          <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-          @error('password')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-          @enderror
-        </div>
-        <div class="input-group mb-3">
-          <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          
-          </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
-          </div>
-          <!-- /.col -->
-        </div>
-      </form>
-                            <div class="register">
-                                <p>Already have an account? <a href="{{ route('login') }}">Sign In</a></p>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" required="">
+                            <i class="ik ik-lock"></i>
+                        </div>
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                        <div class="form-group">
+                            <input type="password" name="password_confirmation" class="form-control" placeholder="Konfirmasi Password" required="">
+                            <i class="ik ik-eye-off"></i>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-left">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option1">
+                                    <span class="custom-control-label">&nbsp;Saya Menerima <a href="#">Syarat dan Ketentuan</a></span>
+                                </label>
                             </div>
+                        </div>
+                        <div class="sign-btn text-center">
+                            <button class="btn btn-theme">Buat Akun</button>
+                        </div>
+                    </form>
+                        <div class="register">
+                            <p>Sudah mempunyai Akun ? <a href="{{ route('login') }}">Masuk</a></p>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -117,4 +101,3 @@
         <script src="{{asset('assets/dist/js/theme.js')}}"></script>
     </body>
 </html>
-@endsection('content')

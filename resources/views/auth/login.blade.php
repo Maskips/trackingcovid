@@ -1,13 +1,11 @@
-
 @extends('layouts.app')
 
-@section('content')
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Login | TrackingKopid || Raflisaputra</title>
+        <title>Login | TrackingKopid</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,68 +24,58 @@
     </head>
 
     <body>
-
         <div class="auth-wrapper">
             <div class="container-fluid h-100">
                 <div class="row flex-row h-100 bg-white">
                     <div class="col-xl-8 col-lg-6 col-md-5 p-0 d-md-block d-lg-block d-sm-none d-none">
-                        <div class="lavalite-bg" style="background-image: url('../img/auth/login-bg.jpg')">
+                        <div class="lavalite-bg" style="background-image: url('{{asset('assets/img/auth/login-bg.jpg')}}')">
                             <div class="lavalite-overlay"></div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-6 col-md-7 my-auto p-0">
                         <div class="authentication-form mx-auto">
                             <div class="logo-centered">
-                                <a href="#"><img src="{{asset('assets/src/img/brand.svg')}}" alt=""></a>
+                              <a href="#"><img src="{{asset('assets/src/img/brand.svg')}}" alt=""></a>
                             </div>
-                            <h3>Sign In to TrackingKopid</h3>
+                            <h3>Masuk ke TrackingKopid</h3>
                             <p>Senang bertemu dengan anda !</p>
                             <form action="{{route('login')}}" method="post">
-          @csrf
-        <div class="input-group mb-3">
-          <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
-            </div>
-          </div>
-          @error('email')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-          @enderror
-        </div>
-        <div class="input-group mb-3">
-          <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-          @error('password')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-          @enderror
-        </div>
-        <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
-          </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-          </div>
-          <!-- /.col -->
-        </div>
-      </form>
+                            @csrf
+                            <div class="form-group">
+                            <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email">  
+                              <i class="ik ik-user"></i>
+                            @error('email')
+                              <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                              </span>
+                            @enderror
+                            </div>
+                            <div class="form-group">
+                            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password">
+                              <i class="ik ik-lock"></i>
+                            @error('password')
+                              <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                              </span>
+                            @enderror
+                            </div>
+                            <div class="row">
+                              <div class="col text-left">
+                                <label class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option1">
+                                  <span class="custom-control-label">&nbsp;Ingat Saya</span>
+                                </label>
+                              </div>
+                              <!-- <div class="col text-right">
+                                <a href="forgot-password.html">Forgot Password ?</a>
+                              </div> -->
+                              </div>
+                              <div class="sign-btn text-center">
+                                <button class="btn btn-theme">Masuk</button>
+                              </div>
+                            </form>
                             <div class="register">
-                                <p>Don't have an account? <a href="{{ route('register') }}">Create an account</a></p>
+                                <p>Belum punya Akun ? <a href="{{ route('register') }}">Buat Akun</a></p>
                             </div>
                         </div>
                     </div>
@@ -104,4 +92,3 @@
     </body>
 </html>
 
-@endsection
