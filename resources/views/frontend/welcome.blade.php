@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
   <link rel="icon" href="{{asset('assets/favicon.ico')}}" type="image/x-icon" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="{{asset('frontend/assets/css/frontend.css')}}" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{{asset('frontend/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -34,7 +34,7 @@
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <!-- <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top ">
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top ">
     <div class="container d-flex align-items-center">
       <div class="contact-info mr-auto">
         <ul>
@@ -44,21 +44,42 @@
         </ul>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="#header" class="scrollto">TrackingKopid</a></h1>
+      {{-- <h1 class="logo mr-auto"><a href="#header" class="scrollto">TrackingKopid</a></h1> --}}
+      <div class="lavalite-bg" style="background-image: url('{{asset('assets/img/auth/login-bg.jpg')}}')">
+        <div class="lavalite-overlay"></div>
+      </div>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="#header" class="logo mr-auto scrollto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <a href="#header" class="logo mr-auto scrollto"><img src="{{asset('frontend/img/logo.png')}}" alt="" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="#header">Home</a></li>
-          <li><a href="#contact">Contact</a></li>
-
+          <li class="drop-down"><a href="">Form Tabel</a>
+            <ul>
+              <li><a href="provinsi">Provinsi</a></li>
+              <li><a href="kota">Kota</a></li>
+              <li><a href="kecamatan">Kecamatan</a></li>
+              <li><a href="kelurahan">Kelurahan</a></li>
+              <li><a href="rw">Rw</a></li>
+              <li><a href="kasus2">Kasus Local</a></li>
+              <!-- <li class="drop-down"><a href="#">Deep Drop Down</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li><a href="login">Login</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -72,26 +93,55 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown"><span>TrackingKopid</span></h2>
+          <a class="header-brand">
+            <div class="animate__animated animate__fadeInDown">
+              <h3><img src="{{asset('assets/src/img/brand-white.svg')}}" class="header-brand-img" alt="lavalite"></h3> 
+            </div>
+            <span class="animate__animated animate__fadeInDown">TrackingKopid</span>
+          </a>
           <p class="animate__animated animate__fadeInUp">Kasus Data Corona Local & Corona Global</p>
         </div>
       </div>
 
       <!-- Slide 2 -->
-      <!-- <div class="carousel-item">
+      <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          <h2 class="animate__animated animate__fadeInDown"><span>KASUS POSITIF</span></h2>
+          <h2 class="animate__animated animate__fadeInUp"><span>{{ number_format ( $positif ) }}</span></h2>
+          <p class="animate__animated animate__fadeInUp">ORANG</p>
         </div>
-      </div> -->
+      </div>
 
       <!-- Slide 3 -->
-      <!-- <div class="carousel-item">
+      <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          <h2 class="animate__animated animate__fadeInDown"><span>KASUS MENINGGAL</span></h2>
+          <h2 class="animate__animated animate__fadeInUp"><span>{{ number_format ( $meninggal ) }}</span></h2>
+          <p class="animate__animated animate__fadeInUp">ORANG</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown"><span>KASUS SEMBUH</span></h2>
+          <h2 class="animate__animated animate__fadeInUp"><span>{{ number_format ( $sembuh ) }}</span></h2>
+          <p class="animate__animated animate__fadeInUp">ORANG</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown"><span>KASUS LOKAL</span></h2>
+          <h2 class="animate__animated animate__fadeInUp"><span><?php ?><span></h2>
+          <p class="animate__animated animate__fadeInUp">ORANG</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown"><span>KASUS GLOBAL</span></h2>
+          <h2 class="animate__animated animate__fadeInUp"><span><?php echo $getglobal ['value'] ?></span></h2>
+          <p class="animate__animated animate__fadeInUp">ORANG</p>
         </div>
       </div>
 
@@ -103,7 +153,7 @@
       <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
         <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
-      </a> -->
+      </a>
 
     </div>
   </section><!-- End Hero -->
@@ -111,33 +161,42 @@
   <main id="main">
 
     <!-- ======= Icon Boxes Section ======= -->
-    <section id="icon-boxes" class="icon-boxes">
+    <!-- <section id="icon-boxes" class="icon-boxes">
       <div class="container">
 
         <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-2 mb-lg-0" data-aos="fade-up">
+          <div class="col-md-8 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
             <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h3 class="title"><a href="#">POSITIF</a></h3>
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h3 class="title"><a href="#">Kasus Positif</a></h3>
               <h3 class="title">{{ $positif }}</h3>
               <h5 class="title"><a>Orang</a></h5>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-md-8 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">SEMBUH</a></h4>
+              <h4 class="title"><a href="">Kasus Sembuh</a></h4>
               <h3 class="title">{{ $sembuh }}</h3>
               <h5 class="title"><a>Orang</a></h5>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-md-8 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">MENINGGAL</a></h4>
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Kasus Meninggal</a></h4>
               <h3 class="title">{{ $meninggal }}</h3>
+              <h5 class="title"><a>Orang</a></h5>
+            </div>
+          </div>
+
+          <div class="col-md-8 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Kasus Indonesia</a></h4>
+              <h3 class="title">??</h3>
               <h5 class="title"><a>Orang</a></h5>
             </div>
           </div>
@@ -145,7 +204,8 @@
         </div>
 
       </div>
-    </section><!-- End Icon Boxes Section -->
+    </section> -->
+    <!-- End Icon Boxes Section -->
 
     <!-- ======= Services Section ======= -->
     <!-- <section id="services" class="services">
@@ -206,7 +266,7 @@
     <!-- End Services Section -->
 
     <!-- ======= Cta Section ======= -->
-    <!-- <section id="cta" class="cta">
+    <section id="cta" class="cta">
       <div class="container">
 
         <div class="row" data-aos="zoom-in">
@@ -309,7 +369,7 @@
     <!-- End Team Section -->
 
     <!-- ======= Contact Section ======= -->
-    <!-- <section id="contact" class="contact">
+    <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">

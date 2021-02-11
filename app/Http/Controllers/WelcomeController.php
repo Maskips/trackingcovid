@@ -30,6 +30,25 @@ class WelcomeController extends Controller
                 ->join('kasus2s', 'rws.id', "=", 'kasus2s.id_rw')
                 ->sum('kasus2s.jmeninggal');
 
-        return view('frontend.welcome', compact('positif', 'sembuh', 'meninggal'));
+        // $lokal = DB::table('provinsis')
+        //     ->join('kotas', 'kotas.id_provinsi', '=', 'provinsis.id')
+        //     ->join('kecamatans', 'kecamatans.id_kota', '=', 'kotas.id')
+        //     ->join('kelurahans', 'kelurahans.id_kecamatan', '=', 'kecamatans.id')
+        //     ->join('rws', 'rws.id_kelurahan', '=', 'kelurahans.id')
+        //     ->join('kasus2s', 'kasus2s.id_rw', '=', 'rws.id')
+        //     ->select('nama_provinsi',
+        //         DB::raw('sum(kasus2s.jpositif) as jpositif'),
+        //         DB::raw('sum(kasus2s.jsembuh) as jsembuh'),
+        //         DB::raw('sum(kasus2s.jmeninggal) as jmeninggal'))
+        //     ->groupBy('nama_provinsi')
+        //     ->get();
+
+        // $lokal2 = file_get_contents('http://localhost:8000/api/today');
+        // $getlokal2 = json_decode($lokal2, TRUE);
+        
+        $global = file_get_contents('https://api.kawalcorona.com/positif');
+        $getglobal = json_decode($global, TRUE);
+
+        return view('frontend.welcome', compact('positif', 'sembuh', 'meninggal', 'global', 'getglobal'));
     }
 }

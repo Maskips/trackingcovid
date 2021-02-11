@@ -88,11 +88,11 @@ class ApiController extends Controller
             ->join('kelurahans', 'kelurahans.id_kecamatan', '=', 'kecamatans.id')
             ->join('rws', 'rws.id_kelurahan', '=', 'kelurahans.id')
             ->join('kasus2s', 'kasus2s.id_rw', '=', 'rws.id')
-            ->select('nama_provinsi', 'kode_provinsi',
+            ->select('nama_provinsi',
                 DB::raw('sum(kasus2s.jpositif) as jpositif'),
                 DB::raw('sum(kasus2s.jsembuh) as jsembuh'),
                 DB::raw('sum(kasus2s.jmeninggal) as jmeninggal'))
-            ->groupBy('nama_provinsi', 'kode_provinsi')
+            ->groupBy('nama_provinsi')->orderBy('nama_provinsi', 'ASC')
             ->get();
             
             $data = [
@@ -169,7 +169,7 @@ class ApiController extends Controller
         return response()->json($data, 200);
     }
 
-    //BERDASARKAN KASUS DARI HARI INI
+    //BERDASARKAN KASUS DARI HARI INI DAN KASUS SELURUH INDONESIA
     public function today() 
     {
         $kasus2 = Kasus2::get('created_at')->last();
