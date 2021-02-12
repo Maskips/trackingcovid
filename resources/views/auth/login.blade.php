@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
-    <!doctype html>
+<!doctype html>
     <html class="no-js" lang="en">
 
     <head>
@@ -96,6 +95,4 @@
         <script src="{{ asset('assets/plugins/screenfull/dist/screenfull.js') }}"></script>
         <script src="{{ asset('assets/dist/js/theme.js') }}"></script>
     </body>
-
-    </html>
-@endsection
+</html>

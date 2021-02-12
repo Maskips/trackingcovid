@@ -44,10 +44,11 @@
                         <th>
                         <form action="{{route('kasus2.destroy', $data->id)}}" method="POST">
                           <!-- <a href="{{route('kasus2.show', $data->id)}}" class="btn btn-warning">Show</a> -->
-                          <a href="{{route('kasus2.edit', $data->id)}}" class="btn btn-primary">Edit</a>
+                          <a href="{{route('kasus2.edit', $data->id)}}" type="button" class="btn btn-dark"><i class="ik ik-edit-2"></i>Edit</a>
                           @csrf
                           @method('DELETE')
-                          <button type="submit" onclick="return confirm('Apakah Anda Yakin ?')" class="btn btn-danger">Delete</button>
+                          
+                          <button type="submit" onclick="return confirm('Apakah Anda Yakin ?')" class="btn btn-danger"><i class="ik ik-trash"></i>Hapus</button>
                         </form>
                         </th>
                       </tr>

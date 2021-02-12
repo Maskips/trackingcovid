@@ -72,7 +72,7 @@
             <div class="page-wrap">
                 <div class="app-sidebar colored">
                     <div class="sidebar-header">
-                        <a class="header-brand" href="index.html">
+                        <a class="header-brand" href="">
                             <div class="logo-img">
                                <img src="{{asset('assets/src/img/brand-white.svg')}}" class="header-brand-img" alt="lavalite"> 
                             </div>
@@ -98,6 +98,10 @@
                                 <div class="nav-item">
                                     <a href="negara" class="ik ik-layers">  Negara</a>
                                     <a href="kasus" class="ik ik-layers">  Kasus</a>
+                                </div>
+                                <div class="nav-lavel"><a><span>FRONTEND</span></a></div>
+                                <div class="nav-item">
+                                    <a href="welcome" class="ik ik-layers">  Frontend Kasus</a>
                                 </div>
                                 <div class="nav-lavel"><a><span>AUTH</span></a></div>
                                 <div class="nav-item">

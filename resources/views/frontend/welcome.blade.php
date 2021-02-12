@@ -60,15 +60,15 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="active"><a href="#header">Home</a></li>
+                    <li class="active"><a href="#">Home</a></li>
                     <li class="drop-down"><a href="">Form Tabel</a>
                         <ul>
-                            <li><a href="provinsi">Provinsi</a></li>
-                            <li><a href="kota">Kota</a></li>
-                            <li><a href="kecamatan">Kecamatan</a></li>
-                            <li><a href="kelurahan">Kelurahan</a></li>
-                            <li><a href="rw">Rw</a></li>
-                            <li><a href="kasus2">Kasus Local</a></li>
+                            <li><a href="admin/provinsi">Provinsi</a></li>
+                            <li><a href="admin/kota">Kota</a></li>
+                            <li><a href="admin/kecamatan">Kecamatan</a></li>
+                            <li><a href="admin/kelurahan">Kelurahan</a></li>
+                            <li><a href="admin/rw">Rw</a></li>
+                            <li><a href="admin/kasus2">Kasus Local</a></li>
                             <!-- <li class="drop-down"><a href="#">Deep Drop Down</a>
                               <ul>
                                 <li><a href="#">Deep Drop Down 1</a></li>
@@ -81,6 +81,7 @@
                         </ul>
                     </li>
                     <li><a href="login">Login</a></li>
+                    <li><a href="register">Register</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
 
@@ -96,27 +97,29 @@
                 <div class="carousel-container">
                     <a class="header-brand">
                         <div class="animate__animated animate__fadeInDown">
-                            <h3><img src="{{ asset('assets/src/img/brand-white.svg') }}" class="header-brand-img"
-                                    alt="lavalite"></h3>
+                          <h3>
+                            </h3><img src="{{ asset('assets/src/img/brand-white.svg') }}" class="header-brand-img" alt="lavalite">
+                          </h3>
                         </div>
                         <span class="animate__animated animate__fadeInDown">TrackingKopid</span>
                     </a>
-                    <p class="animate__animated animate__fadeInUp">Kasus Data Corona Local & Corona Global</p>
+                    <span class="animate__animated animate__fadeInUp"><h2>Kasus Data</h2></span>
+                    <span class="animate__animated animate__fadeInUp"><h2>Corona Local & Corona Global</h2></span>
                 </div>
             </div>
 
             <!-- Slide 2 -->
-            <div class="carousel-item" data-aos-delay="20">
+            {{-- <div class="carousel-item" data-aos-delay="20">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown"><span>KASUS POSITIF</span></h2>
                     <h2 class="animate__animated animate__fadeInUp"><span>{{ number_format($positif) }}</span>
                     </h2>
                     <p class="animate__animated animate__fadeInUp">ORANG</p>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Slide 3 -->
-            <div class="carousel-item" data-aos-delay="20">
+            {{-- <div class="carousel-item" data-aos-delay="20">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown"><span>KASUS MENINGGAL</span></h2>
                     <h2 class="animate__animated animate__fadeInUp"><span>{{ number_format($meninggal) }}</span>
@@ -131,7 +134,7 @@
                     <h2 class="animate__animated animate__fadeInUp"><span>{{ number_format($sembuh) }}</span></h2>
                     <p class="animate__animated animate__fadeInUp">ORANG</p>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- <div class="carousel-item">
                 <div class="carousel-container">
@@ -151,7 +154,7 @@
                 </div>
             </div> --}}
 
-            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            {{-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
@@ -159,58 +162,146 @@
             <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
-            </a>
+            </a> --}}
 
         </div>
     </section><!-- End Hero -->
 
     <main id="main">
-
+      <br><br><br>
     <!-- ======= Icon Boxes Section ======= -->
-    <!-- <section id="icon-boxes" class="icon-boxes">
-      <div class="container">
+    <section>
+      <div class="main-content">
+        <div class="container-fluid">
+            <div class="row clearfix">
 
-        <div class="row">
-          <div class="col-md-8 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h3 class="title"><a href="#">Kasus Positif</a></h3>
-              <h3 class="title">{{ $positif }}</h3>
-              <h5 class="title"><a>Orang</a></h5>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="widget">
+                        <div class="widget-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="state">
+                                  <h3 class="animate__animated animate__fadeInDown"><b>POSITIF</b></h3>
+                                  <h3>{{ number_format($positif) }}</h3>
+                                </div>
+                                <div class="icon">
+                                    <i class="ik ik-award"></i>
+                                </div>
+                            </div>
+                            <small class="text-small mt-10 d-block"><b>Orang</b></small>
+                        </div>
+                        <div class="progress progress-sm">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="widget">
+                        <div class="widget-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="state">
+                                  <h3 class="animate__animated animate__fadeInDown"><b>SEMBUH</b></h3>
+                                  <h3>{{ number_format($sembuh) }}</h3>
+                                </div>
+                                <div class="icon">
+                                    <i class="ik ik-thumbs-up"></i>
+                                </div>
+                            </div>
+                            <small class="text-small mt-10 d-block"><b>Orang</b></small>
+                        </div>
+                        <div class="progress progress-sm">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="widget">
+                        <div class="widget-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="state">
+                                  <h3 class="animate__animated animate__fadeInDown"><b>MENINGGAL</b></h3>
+                                  <h3>{{ number_format($meninggal) }}</h3>
+                                </div>
+                                <div class="icon">
+                                    <i class="ik ik-calendar"></i>
+                                </div>
+                            </div>
+                            <small class="text-small mt-10 d-block"><b>Orang</b></small>
+                        </div>
+                        <div class="progress progress-sm">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="31" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="widget">
+                        <div class="widget-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="state">
+                                  <h3 class="animate__animated animate__fadeInDown"><b>GLOBAL</b></h3>
+                                  <h3>41,410</h3>
+                                </div>
+                                <div class="icon">
+                                    <i class="ik ik-message-square"></i>
+                                </div>
+                            </div>
+                            <small class="text-small mt-10 d-block"><b>Orang</b></small>
+                        </div>
+                        <div class="progress progress-sm">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="col-md-8 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Kasus Sembuh</a></h4>
-              <h3 class="title">{{ $sembuh }}</h3>
-              <h5 class="title"><a>Orang</a></h5>
-            </div>
-          </div>
-
-          <div class="col-md-8 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Kasus Meninggal</a></h4>
-              <h3 class="title">{{ $meninggal }}</h3>
-              <h5 class="title"><a>Orang</a></h5>
-            </div>
-          </div>
-
-          <div class="col-md-8 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Kasus Indonesia</a></h4>
-              <h3 class="title">??</h3>
-              <h5 class="title"><a>Orang</a></h5>
-            </div>
-          </div>
-
         </div>
+    </div>
+    <br><br><br>
 
+    <section id="about" class="about">
+      <div class="col-md-12">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+              <h2>Provinsi</h2>
+          </div>
+          
+          <div class="card">
+              <div class="card-body">
+                  <div class="table-responsive">
+                      <table class="table table-striped table-bordered" id="datatable">
+                          <thead>
+                            <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
+                              <form action="">
+                                <input type="text" class="form-control" placeholder="Search.." required="">
+                                <button type="submit" class="btn btn-icon"><i class="ik ik-search"></i></button>
+                              </form>
+                          </div>
+                              <tr>
+                                  <th>NO</th>
+                                  <th>PROVINSI</th>
+                                  <th>POSITIF</th>
+                                  <th>SEMBUH</th>
+                                  <th>MENINGGAL</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              @php $no=1; @endphp
+                              @foreach ($provinsi as $data)
+                                  <tr>
+                                      <td>{{ $no++ }}</td>
+                                      <td>{{ $data->nama_provinsi }}</td>
+                                      <td>{{ number_format($data->jpositif) }}</td>
+                                      <td>{{ number_format($data->jsembuh) }}</td>
+                                      <td>{{ number_format($data->jmeninggal) }}</td>
+                                  </tr>
+                              @endforeach
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+        </div>
       </div>
-      </section> -->
+
+    </section>
         <!-- End Icon Boxes Section -->
 
         <!-- ======= Services Section ======= -->

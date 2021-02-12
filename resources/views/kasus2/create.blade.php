@@ -46,7 +46,7 @@
                         @endif
                     </div>
                     </div>
-                        <button type="submit" class="btn btn-dark">SIMPAN</button>
+                        <button type="submit" class="btn btn-info btn-block"><i class="ik ik-clipboard"></i>Simpan</button>
                 </form>
                 </div>
         </div>

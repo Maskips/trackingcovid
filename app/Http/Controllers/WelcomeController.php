@@ -29,26 +29,22 @@ class WelcomeController extends Controller
                 ->select('kasus2s.jpositif', 'kasus2s.jsembuh', 'kasus2s.jmeninggal')
                 ->join('kasus2s', 'rws.id', "=", 'kasus2s.id_rw')
                 ->sum('kasus2s.jmeninggal');
+        $provinsi = DB::table('kasus2s')
+                ->select('kode_provinsi','nama_provinsi',
+                        DB::raw('SUM(kasus2s.jpositif) as jpositif'),
+                        DB::raw('SUM(kasus2s.jsembuh) as jsembuh'),
+                        DB::raw('SUM(kasus2s.jmeninggal) as jmeninggal'))
+                ->join('rws', 'rws.id', '=', 'kasus2s.id_rw')
+                ->join('kelurahans', 'kelurahans.id', '=', 'rws.id_kelurahan')
+                ->join('kecamatans', 'kecamatans.id', '=', 'kelurahans.id_kecamatan')
+                ->join('kotas', 'kotas.id', '=', 'kecamatans.id_kota')
+                ->join('provinsis', 'provinsis.id', '=', 'kotas.id_provinsi')
+                ->groupBy('nama_provinsi','kode_provinsi')
+                ->get();
 
-        // $lokal = DB::table('provinsis')
-        //     ->join('kotas', 'kotas.id_provinsi', '=', 'provinsis.id')
-        //     ->join('kecamatans', 'kecamatans.id_kota', '=', 'kotas.id')
-        //     ->join('kelurahans', 'kelurahans.id_kecamatan', '=', 'kecamatans.id')
-        //     ->join('rws', 'rws.id_kelurahan', '=', 'kelurahans.id')
-        //     ->join('kasus2s', 'kasus2s.id_rw', '=', 'rws.id')
-        //     ->select('nama_provinsi',
-        //         DB::raw('sum(kasus2s.jpositif) as jpositif'),
-        //         DB::raw('sum(kasus2s.jsembuh) as jsembuh'),
-        //         DB::raw('sum(kasus2s.jmeninggal) as jmeninggal'))
-        //     ->groupBy('nama_provinsi')
-        //     ->get();
+        // $global = file_get_contents('https://api.kawalcorona.com/positif');
+        // $getglobal = json_decode($global, TRUE);
 
-        // $lokal2 = file_get_contents('http://localhost:8000/api/today');
-        // $getlokal2 = json_decode($lokal2, TRUE);
-        
-        $global = file_get_contents('https://api.kawalcorona.com/positif');
-        $getglobal = json_decode($global, TRUE);
-
-        return view('frontend.welcome', compact('positif', 'sembuh', 'meninggal', 'global', 'getglobal'));
+        return view('frontend.welcome', compact('positif', 'sembuh', 'meninggal', 'provinsi'));
     }
 }
