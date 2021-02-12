@@ -34,15 +34,15 @@ class KecamatanController extends Controller
             'kode_kecamatan' => 'required|max:4|unique:kecamatans',
             'nama_kecamatan' => 'required|unique:kecamatans',
         ], [
-            'kode_kecamatan.required' => 'Kode Harus Di Isi',
-            'kode_kecamatan.max' => 'Kode Maksimal 4 Nomer',
-            'kode_kecamatan.unique' => 'Kode Sudah Dipakai',
+            // 'kode_kecamatan.required' => 'Kode Harus Di Isi',
+            // 'kode_kecamatan.max' => 'Kode Maksimal 4 Nomer',
+            // 'kode_kecamatan.unique' => 'Kode Sudah Dipakai',
             'nama_kecamatan.required' => 'Nama Harus Di Isi',
             'nama_kecamatan.unique' => 'Kode Sudah Dipakai',
         ]);
 
         $kecamatan = new Kecamatan;
-        $kecamatan->kode_kecamatan = $request->kode_kecamatan;
+        // $kecamatan->kode_kecamatan = $request->kode_kecamatan;
         $kecamatan->nama_kecamatan = $request->nama_kecamatan;
         $kecamatan->id_kota = $request->id_kota;
         $kecamatan->save();
@@ -66,7 +66,7 @@ class KecamatanController extends Controller
     public function update(Request $request, $id)
     {
         $kecamatan = Kecamatan::findOrFail($id);
-        $kecamatan->kode_kecamatan = $request->kode_kecamatan;
+        // $kecamatan->kode_kecamatan = $request->kode_kecamatan;
         $kecamatan->nama_kecamatan = $request->nama_kecamatan;
         $kecamatan->id_kota = $request->id_kota;
         $kecamatan->save();

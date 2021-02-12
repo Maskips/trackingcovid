@@ -17,7 +17,7 @@
               <thead class="theme-dark">
                         <tr>
                           <th scope="col">ID</th>
-                          <th scope="col">KODE KECAMATAN</th>
+                          {{-- <th scope="col">KODE KECAMATAN</th> --}}
                           <th scope="col">NAMA KECAMATAN</th>
                           <th scope="col">NAMA KOTA</th>
                           <th scope="col">ACTION</th>
@@ -28,7 +28,7 @@
                       @foreach ( $kecamatan as $data )
                       <tr>
                       <th scope="row">{{ $no++ }}</th>
-                        <td>{{ $data->kode_kecamatan }}</td>
+                        {{-- <td>{{ $data->kode_kecamatan }}</td> --}}
                         <td>{{ $data->nama_kecamatan }}</td>
                         <td>{{ $data->kota->nama_kota }}<td>
                         <form action="{{route('kecamatan.destroy', $data->id)}}" method="POST">

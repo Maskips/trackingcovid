@@ -17,7 +17,6 @@
         <link rel="stylesheet" href="{{asset('assets/plugins/icon-kit/dist/css/iconkit.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/ionicons/dist/css/ionicons.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/jvectormap/jquery-jvectormap.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/weather-icons/css/weather-icons.min.css')}}">
@@ -32,10 +31,8 @@
         <link rel="stylesheet" href="{{asset('assets/plugins/ionicons/dist/css/ionicons.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/icon-kit/dist/css/iconkit.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/dist/css/theme.min.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/datatables/datatable.min.css')}}">
         <script src="{{asset('assets/src/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
         
         @livewireStyles
     </head>
@@ -64,7 +61,7 @@
                                     <a class="dropdown-item" href="#"><i class="ik ik-settings dropdown-icon"></i> Settings</a>
                                     <a class="dropdown-item" href="#"><span class="float-right"><span class="badge badge-primary">6</span></span><i class="ik ik-mail dropdown-icon"></i> Inbox</a>
                                     <a class="dropdown-item" href="#"><i class="ik ik-navigation dropdown-icon"></i> Message</a>
-                                    <a class="dropdown-item" href="login.html"><i class="ik ik-power dropdown-icon"></i> Logout</a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -90,17 +87,25 @@
                             <nav id="main-menu-navigation" class="navigation-main">
                                 <div class="nav-lavel"><a><span>LOCAL</span></a></div>
                                 <div class="nav-item">
-                                    <a href="provinsi" class="ik ik-layers">  Provinsi</a>
-                                    <a href="kota" class="ik ik-layers">  Kota</a>
-                                    <a href="kecamatan" class="ik ik-layers">  Kecamatan</a>
-                                    <a href="kelurahan" class="ik ik-layers">  Kelurahan</a>
-                                    <a href="rw" class="ik ik-layers">  Rw</a>
-                                    <a href="kasus2" class="ik ik-layers">  Kasus2</a>                    
+                                    <a href="{{route('provinsi.index')}}" class="ik ik-layers">  Provinsi</a>
+                                    <a href="{{route('kota.index')}}" class="ik ik-layers">  Kota</a>
+                                    <a href="{{route('kecamatan.index')}}" class="ik ik-layers">  Kecamatan</a>
+                                    <a href="{{route('kelurahan.index')}}" class="ik ik-layers">  Kelurahan</a>
+                                    <a href="{{route('rw.index')}}" class="ik ik-layers">  Rw</a>
+                                    <a href="{{route('kasus2.index')}}" class="ik ik-layers">  Kasus2</a>                    
                                 </div>
                                 <div class="nav-lavel"><a><span>GLOBAL</span></a></div>
                                 <div class="nav-item">
                                     <a href="negara" class="ik ik-layers">  Negara</a>
                                     <a href="kasus" class="ik ik-layers">  Kasus</a>
+                                </div>
+                                <div class="nav-lavel"><a><span>AUTH</span></a></div>
+                                <div class="nav-item">
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    <i class="ik ik-power dropdown-icon"></i> Logout</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                    </form>
                                 </div>
                             </nav>
                         </div>
@@ -122,16 +127,12 @@
             </div>
         </div>
         
-        <script src="{{asset('assets/https://code.jquery.com/jquery-3.3.1.min.js')}}"></script>
-        <script>window.jQuery || document.write('<script src="{{asset('assets/src/js/vendor/jquery-3.3.1.min.js')}}">')</script>
-        <script src="{{asset('assets/plugins/popper.js')}}/dist/umd/popper.min.js')}}"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{asset('assets/src/js/vendor/jquery-3.3.1.min.js')}}"><\/script>')</script>
+        <script src="{{asset('assets/plugins/popper.js/dist/umd/popper.min.js')}}"></script>
         <script src="{{asset('assets/plugins/bootstrap/dist/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('assets/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js')}}"></script>
         <script src="{{asset('assets/plugins/screenfull/dist/screenfull.js')}}"></script>
-        <script src="{{asset('assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-        <script src="{{asset('assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-        <script src="{{asset('assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
-        <script src="{{asset('assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
         <script src="{{asset('assets/plugins/jvectormap/jquery-jvectormap.min.js')}}"></script>
         <script src="{{asset('assets/plugins/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js')}}"></script>
         <script src="{{asset('assets/plugins/moment/moment.js')}}"></script>
@@ -142,17 +143,12 @@
         <script src="{{asset('assets/js/widgets.js')}}"></script>
         <script src="{{asset('assets/js/charts.js')}}"></script>
         <script src="{{asset('assets/dist/js/theme.min.js')}}"></script>
-        <script src="{{asset('assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-        <script src="{{asset('assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-        <script src="{{asset('assets/dist/js/theme.min.js')}}"></script>
-        <script src="{{asset('assets/js/datatables.js')}}"></script>
-        <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
         
-        <script type="text/javascript" charset="utf8" src="{{asset('assets///cdn.datatables.net/1.10.16/js/jquery.dataTables/js')}}"></script>
+        <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
         @yield('js')
             <script>
                 $(document).ready( function () {
-                    $('#datatable').DataTable();
+                    $('#data_table').DataTable();
                 });
             </script>
         @livewireScripts

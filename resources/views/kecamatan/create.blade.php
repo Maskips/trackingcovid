@@ -9,13 +9,13 @@
                 <div class="card-body">
                 <form action="{{route('kecamatan.store')}}" method="POST">
                 @csrf
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Kode Kecamatan</label>
                         <input type="number" name="kode_kecamatan" class="form-control" id="exampleInputEmail1"> 
                         @if($errors->has('kode_kecamatan'))
                             <span class="text-danger">{{ $errors->first('kode_kecamatan') }}</span>
                         @endif
-                    </div>
+                    </div> --}}
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Nama Kecamatan</label>
                         <input type="text" name="nama_kecamatan" class="form-control" id="exampleInputPassword1">
