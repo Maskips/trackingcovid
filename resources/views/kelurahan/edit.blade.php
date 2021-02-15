@@ -10,10 +10,10 @@
                 <form action="{{route('kelurahan.update', $kelurahan->id)}}" method="POST">
                 <input type="hidden" name="_method" value="PUT">
                 @csrf
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Kode Kelurahan</label>
                         <input type="text" name="kode_kelurahan" value="{{$kelurahan->kode_kelurahan}}" class="form-control" required> 
-                    </div>
+                    </div> --}}
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Nama Kelurahan</label>
                         <input type="text" name="nama_kelurahan" value="{{$kelurahan->nama_kelurahan}}" class="form-control" required>

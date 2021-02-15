@@ -9,7 +9,7 @@ use App\Models\Kecamatan;
 class Kelurahan extends Model
 {
     protected $fillable = [
-        'kode_kelurahan',
+        
         'nama_kelurahan',
         'id_kecamatan',
     ];

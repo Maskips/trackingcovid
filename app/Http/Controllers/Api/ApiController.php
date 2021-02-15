@@ -120,7 +120,7 @@ class ApiController extends Controller
             
             $data = [
                 'success'           => true,
-                'Data Kota'     => $tampil_kota,
+                'Data Kota'         => $tampil_kota,
                 'message'           => 'Data Kasus Berdasarkan Id Kota di Tampilkan'
             ];
         return response()->json($data, 200);
@@ -173,9 +173,9 @@ class ApiController extends Controller
     public function today() 
     {
         $kasus2 = Kasus2::get('created_at')->last();
-        $jpositif = Kasus2::where('tanggal', date('Y-m-d'))->sum('jpositif');
-        $jsembuh = Kasus2::where('tanggal', date('Y-m-d'))->sum('jsembuh');
-        $jmeninggal = Kasus2::where('tanggal', date('Y-m-d'))->sum('jmeninggal');
+        $jpositif = Kasus2::where('tanggal', date('d-m-Y'))->sum('jpositif');
+        $jsembuh = Kasus2::where('tanggal', date('d-m-Y'))->sum('jsembuh');
+        $jmeninggal = Kasus2::where('tanggal', date('d-m-Y'))->sum('jmeninggal');
 
         $kips = DB::table('kasus2s')
             ->select('jpositif', 'jsembuh', 'jmeninggal')
@@ -187,7 +187,7 @@ class ApiController extends Controller
                 DB::raw('sum(kasus2s.jpositif) as jpositif'),
                 DB::raw('sum(kasus2s.jsembuh) as jsembuh'),
                 DB::raw('sum(kasus2s.jmeninggal) as jmeninggal'))
-            ->whereDate('kasus2s.tanggal', date('Y-m-d'))
+            ->whereDate('kasus2s.tanggal', date('d-m-Y'))
             ->groupby('kasus2s.id')
             ->get();
         

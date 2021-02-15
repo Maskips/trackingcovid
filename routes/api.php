@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProvinsiController;
 use App\Http\Controllers\Api\ApiController;
+use App\Http\Controllers\Welcome2Controller;
+
 
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
@@ -29,3 +31,4 @@ Route::get('kelurahan', [ApiController::class, 'kelurahan']);
 Route::get('today', [ApiController::class, 'today']);
 Route::get('global',[ApiController::class, 'global']);
 Route::get('global2',[ApiController::class, 'global2']);
+

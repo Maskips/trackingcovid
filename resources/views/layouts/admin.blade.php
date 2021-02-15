@@ -23,9 +23,13 @@
         <link rel="stylesheet" href="{{asset('assets/plugins/c3/c3.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/owl.carousel/dist/assets/owl.carousel.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/owl.carousel/dist/assets/owl.theme.default.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/dist/css/theme.min.css')}}">
         <script src="{{asset('assets/src/js/vendor/modernizr-2.8.3.min.js')}}"></script>
         <!-- Datatables-->
+        <link rel="stylesheet" href="{{asset('assets/plugins/datatables/datatable.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+
         <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap/dist/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/plugins/ionicons/dist/css/ionicons.min.css')}}">
@@ -44,25 +48,23 @@
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">
                             <button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
-                            <div class="header-search">
+                            {{-- <div class="header-search">
                                 <div class="input-group">
                                     <span class="input-group-addon search-close"><i class="ik ik-x"></i></span>
                                     <input type="text" class="form-control">
                                     <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>
                                 </div>
-                            </div>
+                            </div> --}}
                             <button type="button" id="navbar-fullscreen" class="nav-link"><i class="ik ik-maximize"></i></button>
                         </div>
-                        <div class="top-menu d-flex align-items-center">
-                            <div class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="{{asset('assets/img/user.jpg')}}" alt=""></a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="profile.html"><i class="ik ik-user dropdown-icon"></i> Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="ik ik-settings dropdown-icon"></i> Settings</a>
-                                    <a class="dropdown-item" href="#"><span class="float-right"><span class="badge badge-primary">6</span></span><i class="ik ik-mail dropdown-icon"></i> Inbox</a>
-                                    <a class="dropdown-item" href="#"><i class="ik ik-navigation dropdown-icon"></i> Message</a>
-                                    
-                                </div>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="../img/user.jpg" alt=""></a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#"><i class="ik ik-user dropdown-icon"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="ik ik-settings dropdown-icon"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><span class="float-right"><span class="badge badge-primary">6</span></span><i class="ik ik-mail dropdown-icon"></i> Inbox</a>
+                                <a class="dropdown-item" href="#"><i class="ik ik-navigation dropdown-icon"></i> Message</a>
+                                <a class="dropdown-item" href="#"><i class="ik ik-power dropdown-icon"></i> Logout</a>
                             </div>
                         </div>
                     </div>
@@ -78,32 +80,32 @@
                             </div>
                             <span class="text">TrackingKopid</span>
                         </a>
-                        <button type="button" class="nav-toggle"><i data-toggle="expanded" class="ik ik-toggle-right toggle-icon"></i></button>
-                        <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
+                        <button type="button" class="nav-toggle">
+                            <i data-toggle="expanded" class="ik ik-toggle-right toggle-icon"></i>
+                        </button>
+                        <button id="sidebarClose" class="nav-close">
+                            <i class="ik ik-x"></i>
+                        </button>
                     </div>
                     
                     <div class="sidebar-content">
                         <div class="nav-container">
                             <nav id="main-menu-navigation" class="navigation-main">
-                                <div class="nav-lavel"><a><span>LOCAL</span></a></div>
+                                <div class="nav-lavel"><a><span>Kasus Local</span></a></div>
                                 <div class="nav-item">
-                                    <a href="{{route('provinsi.index')}}" class="ik ik-layers">  Provinsi</a>
-                                    <a href="{{route('kota.index')}}" class="ik ik-layers">  Kota</a>
-                                    <a href="{{route('kecamatan.index')}}" class="ik ik-layers">  Kecamatan</a>
-                                    <a href="{{route('kelurahan.index')}}" class="ik ik-layers">  Kelurahan</a>
-                                    <a href="{{route('rw.index')}}" class="ik ik-layers">  Rw</a>
-                                    <a href="{{route('kasus2.index')}}" class="ik ik-layers">  Kasus2</a>                    
+                                    <a href="{{route('provinsi.index')}}"><i class="ik ik-paperclip"></i><span>Provinsi</span></a>
+                                    <a href="{{route('kota.index')}}"><i class="ik ik-paperclip"></i><span>Kota</span></a>
+                                    <a href="{{route('kecamatan.index')}}"><i class="ik ik-paperclip"></i><span>Kecamatan</span></a>
+                                    <a href="{{route('kelurahan.index')}}"><i class="ik ik-paperclip"></i><span>Kelurahan</span></a>
+                                    <a href="{{route('rw.index')}}"><i class="ik ik-paperclip"></i><span>Rukun Warga</span></a>
+                                    <a href="{{route('kasus2.index')}}"><i class="ik ik-paperclip"></i><span>Data Kasus</span></a>
                                 </div>
-                                <div class="nav-lavel"><a><span>GLOBAL</span></a></div>
+                                <div class="nav-lavel"><a><span>Kasus Global</span></a></div>
                                 <div class="nav-item">
-                                    <a href="negara" class="ik ik-layers">  Negara</a>
-                                    <a href="kasus" class="ik ik-layers">  Kasus</a>
+                                    <a href="#"><i class="ik ik-paperclip"></i><span>Negara</span></a>
+                                    <a href="#"><i class="ik ik-paperclip"></i><span>Data Kasus</span></a>
                                 </div>
-                                <div class="nav-lavel"><a><span>FRONTEND</span></a></div>
-                                <div class="nav-item">
-                                    <a href="welcome" class="ik ik-layers">  Frontend Kasus</a>
-                                </div>
-                                <div class="nav-lavel"><a><span>AUTH</span></a></div>
+                                <div class="nav-lavel"><a><span>Authentication</span></a></div>
                                 <div class="nav-item">
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                     <i class="ik ik-power dropdown-icon"></i> Logout</a>
@@ -132,8 +134,8 @@
         </div>
         
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{{asset('assets/src/js/vendor/jquery-3.3.1.min.js')}}"><\/script>')</script>
-        <script src="{{asset('assets/plugins/popper.js/dist/umd/popper.min.js')}}"></script>
+        <script window.jQuery || document.write('<script src="{{asset('assets/src/js/vendor/jquery-3.3.1.min.js')}}"></script>')</>
+        <script window.jQuerywindow.jQuery src="{{asset('assets/plugins/popper.js/dist/umd/popper.min.js')}}"></script>
         <script src="{{asset('assets/plugins/bootstrap/dist/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('assets/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js')}}"></script>
         <script src="{{asset('assets/plugins/screenfull/dist/screenfull.js')}}"></script>
@@ -148,13 +150,25 @@
         <script src="{{asset('assets/js/charts.js')}}"></script>
         <script src="{{asset('assets/dist/js/theme.min.js')}}"></script>
         
-        <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+        <script src="{{asset('assets/plugins/screenfull/dist/screenfull.js')}}"></script>
+        <script src="{{asset('assets/plugins/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+        <script src="{{asset('assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+        <script src="{{asset('assets/dist/js/theme.min.js')}}"></script>
+        <script src="{{asset('assets/js/datatables.js')}}"></script>
+       
+        <!-- DataTables -->
+        <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}" ></script>
+        <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/js/jquery.dataTables.min.js"></script>
         @yield('js')
-            <script>
-                $(document).ready( function () {
-                    $('#data_table').DataTable();
-                });
-            </script>
+        <!-- Page specific script -->
+        <script>
+            $(document).ready( function () {
+                $('#data_table').DataTable();
+            } );
+        </script>
+
+
         @livewireScripts
     </body>
 </html>

@@ -8,13 +8,13 @@
                 <div class="card-body">
                 <form action="{{route('kelurahan.store')}}" method="POST">
                 @csrf
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Kode Kelurahan</label>
                         <input type="number" name="kode_kelurahan" class="form-control" id="exampleInputPassword1">
                         @if($errors->has('kode_kelurahan'))
                             <span class="text-danger">{{ $errors->first('kode_kelurahan') }}</span>
                         @endif
-                    </div>
+                    </div> --}}
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Nama Kelurahan</label>
                         <input type="text" name="nama_kelurahan" class="form-control" id="exampleInputPassword1">
@@ -29,7 +29,7 @@
                             <option value="{{$data->id}}">{{$data->nama_kecamatan}}</option>
                         @endforeach
                         </select>
-                        <button type="submit" class="btn btn-dark">SIMPAN</button>
+                        <button type="submit" class="btn btn-info btn-block"><i class="ik ik-clipboard"></i>Simpan</button>
                 </form>
                 </div>
             </div>
