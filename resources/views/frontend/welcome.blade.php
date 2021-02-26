@@ -349,7 +349,7 @@
                     <div class="media d-flex">
                       <div class="media-body text-left">
                         <span><h5><b>GLOBAL</b></h5></span>
-                        <h1 class="info"><?php echo $getglobal['value'] ?></h1>
+                        <h1 class="info">43.298.232</h1>
                         <small>Orang</small>
                       </div>
                       <div class="align-self-center">
@@ -405,7 +405,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="container" data-aos="fade-up">
+            {{-- <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Global</h2>
                 </div>
@@ -439,7 +439,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </section>
         
         {{-- <section id="stats-subtitle">
