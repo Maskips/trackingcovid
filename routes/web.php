@@ -8,7 +8,7 @@ use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\RwController;
 use App\Http\Controllers\Kasus2Controller;
 
-Route::get('/1', function () {
+Route::get('/', function () {
     return view('frontend.welcome');
 });
 
@@ -18,7 +18,7 @@ Route::get('/2', function () {
 
 //FRONTEND
 use App\Http\Controllers\WelcomeController;
-Route::resource('/ke1', WelcomeController::class);
+Route::resource('/', WelcomeController::class);
 
 //FRONTEND #2
 use App\Http\Controllers\Welcome2Controller;
