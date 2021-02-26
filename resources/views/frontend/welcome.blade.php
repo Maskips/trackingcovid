@@ -91,7 +91,7 @@
                             
                         {{-- </ul> --}}
                     </li>
-                    <li><a href="login">Login</a></li>
+                    {{-- <li><a href="login">Login</a></li> --}}
                 </ul>
             </nav><!-- .nav-menu -->
 
@@ -314,7 +314,7 @@
                       </div>
                     </div>
                     <div class="progress mt-1 mb-0" style="height: 7px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 35%" aria-valuenow="40%" aria-valuemin="0" aria-valuemax="9999"></div>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="40%" aria-valuemin="0" aria-valuemax="9999"></div>
                     </div>
                   </div>
                 </div>
@@ -336,7 +336,7 @@
                       </div>
                     </div>
                     <div class="progress mt-1 mb-0" style="height: 7px;">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="12%" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="12%" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 </div>
@@ -357,7 +357,7 @@
                       </div>
                     </div>
                     <div class="progress mt-1 mb-0" style="height: 7px;">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="100%" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="100%" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 </div>
@@ -369,6 +369,8 @@
           </div>
         <!--LOCAL -->
         <section id="contact" class="service">
+          
+            <div class="col-md-12">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Local</h2>
@@ -404,6 +406,7 @@
                     </div>
                 </div>
             </div>
+          </div>
             <br><br>
             {{-- <div class="container" data-aos="fade-up">
                 <div class="section-title">
