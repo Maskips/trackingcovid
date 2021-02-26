@@ -91,7 +91,7 @@
                             
                         {{-- </ul> --}}
                     </li>
-                    {{-- <li><a href="login">Login</a></li> --}}
+                    <li><a href="login">Login</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
 
@@ -349,7 +349,7 @@
                     <div class="media d-flex">
                       <div class="media-body text-left">
                         <span><h5><b>GLOBAL</b></h5></span>
-                        <h1 class="info">43.298.232</h1>
+                        <h1 class="info"><?php {{ number_format($getglobal['value']) }} ?></h1>
                         <small>Orang</small>
                       </div>
                       <div class="align-self-center">
@@ -408,7 +408,7 @@
             </div>
           </div>
             <br><br>
-            {{-- <div class="container" data-aos="fade-up">
+            <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Global</h2>
                 </div>
@@ -442,7 +442,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
         </section>
         
         {{-- <section id="stats-subtitle">
@@ -896,7 +896,7 @@
                 &copy; Copyright <strong><span>TrackingKopid</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
-                Designed by <a href="#">BootstrapMade</a>
+                Designed by Maskips
             </div>
         </div>
     </footer><!-- End Footer -->
