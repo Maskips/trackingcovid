@@ -349,7 +349,7 @@
                     <div class="media d-flex">
                       <div class="media-body text-left">
                         <span><h5><b>GLOBAL</b></h5></span>
-                        <h1 class="info"><?php echo $lokal['value'];?></h1>
+                        <h1 class="info"><?php echo $getglobal['value'];?></h1>
                         <small>Orang</small>
                       </div>
                       <div class="align-self-center">

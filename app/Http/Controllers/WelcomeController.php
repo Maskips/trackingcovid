@@ -47,9 +47,9 @@ class WelcomeController extends Controller
         $url = Http::get('https://api.kawalcorona.com/')->json();
         $global = file_get_contents('https://api.kawalcorona.com/positif');
         $getglobal = json_decode($global, TRUE);
-        $lokal = Http::get('http://127.0.0.1:8000/api/provinsi')->json();
+        
         $tanggal = Carbon::now()->format(' d F Y, H:i');
 
-        return view('frontend.welcome', compact('positif', 'sembuh', 'meninggal', 'provinsi', 'tanggal', 'lokal', 'url', 'global', 'getglobal'));
+        return view('frontend.welcome', compact('positif', 'sembuh', 'meninggal', 'provinsi', 'tanggal', 'url', 'global', 'getglobal'));
     }
 }
