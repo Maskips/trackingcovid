@@ -16,7 +16,7 @@
           <div class="card-body">
             <div class="table-responsive">
             <table id="data_table" class="table table-hover">
-              <thead class="theme-dark">
+              <thead class="table-dark">
                         <tr>
                           <th scope="col">ID</th>
                           <th scope="col">LOKASI</th>

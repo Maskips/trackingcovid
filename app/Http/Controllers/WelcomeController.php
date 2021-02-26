@@ -11,6 +11,8 @@ use App\Models\Kota;
 use App\Models\Kecamatan;
 use App\Models\Kelurahan;
 use App\Models\Rw;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Carbon;
 
 class WelcomeController extends Controller
 {
@@ -42,9 +44,12 @@ class WelcomeController extends Controller
                 ->groupBy('nama_provinsi','kode_provinsi')
                 ->get();
 
-        // $global = file_get_contents('https://api.kawalcorona.com/positif');
-        // $getglobal = json_decode($global, TRUE);
+        $url = Http::get('https://api.kawalcorona.com/')->json();
+        $global = file_get_contents('https://api.kawalcorona.com/positif');
+        $getglobal = json_decode($global, TRUE);
 
-        return view('frontend.welcome', compact('positif', 'sembuh', 'meninggal', 'provinsi'));
+        $tanggal = Carbon::now()->format(' d F Y, H:i');
+
+        return view('frontend.welcome', compact('positif', 'sembuh', 'meninggal', 'provinsi', 'tanggal', 'url', 'global', 'getglobal'));
     }
 }

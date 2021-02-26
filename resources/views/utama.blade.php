@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <h2>Ini Halaman Utama</h2>
+                    <h2>Selamat Datang Di Halaman Admin</h2>
                 </div>
             </div>
         </div>

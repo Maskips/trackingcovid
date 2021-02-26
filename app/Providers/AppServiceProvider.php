@@ -22,7 +22,9 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        //
-    }
+{
+    \Carbon\Carbon::setLocale('id');
+    // jika ingin menyesuaikan dengan dengan locale di laravel
+    \Carbon\Carbon::setLocale(config('app.locale'));
+}
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TrackingKopid || Raflisaputraa</title>
+        <title>TrackingKopid || Kasus Local dan Global</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -100,19 +100,19 @@
                                     <a href="{{route('rw.index')}}"><i class="ik ik-paperclip"></i><span>Rukun Warga</span></a>
                                     <a href="{{route('kasus2.index')}}"><i class="ik ik-paperclip"></i><span>Data Kasus</span></a>
                                 </div>
-                                <div class="nav-lavel"><a><span>Kasus Global</span></a></div>
+                                {{-- <div class="nav-lavel"><a><span>Kasus Global</span></a></div>
                                 <div class="nav-item">
                                     <a href="#"><i class="ik ik-paperclip"></i><span>Negara</span></a>
                                     <a href="#"><i class="ik ik-paperclip"></i><span>Data Kasus</span></a>
-                                </div>
-                                <div class="nav-lavel"><a><span>Authentication</span></a></div>
+                                </div> --}}
+                                {{-- <div class="nav-lavel"><a><span>Authentication</span></a></div>
                                 <div class="nav-item">
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                     <i class="ik ik-power dropdown-icon"></i> Logout</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                     </form>
-                                </div>
+                                </div> --}}
                             </nav>
                         </div>
                     </div>

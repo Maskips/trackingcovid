@@ -25,6 +25,14 @@
     <link href="{{ asset('frontend/assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/assets/vendor/aos/aos.css') }}" rel="stylesheet">
 
+    <!-- Online -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
     <!-- Template Main CSS File -->
     <link href="{{ asset('frontend/assets/css/style.css') }}" rel="stylesheet">
 
@@ -39,7 +47,7 @@
 <body>
 
     <!-- ======= Top Bar ======= -->
-    <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top ">
+    {{-- <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top ">
         <div class="container d-flex align-items-center">
             <div class="contact-info mr-auto">
                 <ul>
@@ -50,7 +58,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
@@ -60,6 +68,10 @@
             <div class="lavalite-bg" style="background-image: url('{{ asset('assets/img/auth/login-bg.jpg') }}')">
                 <div class="lavalite-overlay"></div>
             </div>
+                <a class="navbar-brand" href="#">
+                <img src="{{ asset('assets/src/img/brand-white.svg') }}" width="40" height="40" class="d-inline-block align-top" alt="laravite" ><br>
+                  
+                </a>
             <!-- Uncomment below if you prefer to use an image logo -->
             <a href="#header" class="logo mr-auto scrollto"><img src="{{ asset('frontend/img/logo.png') }}" alt=""
                     class="img-fluid"></a>
@@ -67,27 +79,19 @@
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                     <li class="active"><a href="#">Home</a></li>
-                    <li class="drop-down"><a href="">Form Tabel</a>
+                    
+                    {{-- <li class="drop-down"><a href="">Form Tabel</a>
                         <ul>
                             <li><a href="admin/provinsi">Provinsi</a></li>
                             <li><a href="admin/kota">Kota</a></li>
                             <li><a href="admin/kecamatan">Kecamatan</a></li>
                             <li><a href="admin/kelurahan">Kelurahan</a></li>
-                            <li><a href="admin/rw">Rw</a></li>
-                            <li><a href="admin/kasus2">Kasus Local</a></li>
-                            <!-- <li class="drop-down"><a href="#">Deep Drop Down</a>
-                              <ul>
-                                <li><a href="#">Deep Drop Down 1</a></li>
-                                <li><a href="#">Deep Drop Down 2</a></li>
-                                <li><a href="#">Deep Drop Down 3</a></li>
-                                <li><a href="#">Deep Drop Down 4</a></li>
-                                <li><a href="#">Deep Drop Down 5</a></li>
-                              </ul>
-                            </li> -->
-                        </ul>
+                            <li><a href="admin/rw">Rukun Warga</a></li>
+                            <li><a href="admin/kasus2">Kasus Local</a></li> --}}
+                            
+                        {{-- </ul> --}}
                     </li>
                     <li><a href="login">Login</a></li>
-                    <li><a href="register">Register</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
 
@@ -98,26 +102,27 @@
     <section id="hero" class="d-flex justify-cntent-center align-items-center">
         <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
 
+          
             <!-- Slide 1 -->
-            <div class="carousel-item active" delay="10">
+            <div class="carousel-item active" delay="3">
                 <div class="carousel-container">
-                    <a class="header-brand">
+                    {{-- <a class="header-brand">
                         <div class="animate__animated animate__fadeInDown">
                           <h3>
                             </h3><img src="{{ asset('assets/src/img/brand-white.svg') }}" class="header-brand-img" alt="lavalite">
                           </h3>
                         </div>
                         <span class="animate__animated animate__fadeInDown">____________</span>
-                    </a>
+                    </a> --}}
                     <span class="animate__animated animate__fadeInUp"><h2>TrackingKopid</h2></span>
                     {{-- <span class="animate__animated animate__fadeInUp"><h2>Corona Local & Corona Global</h2></span> --}}
                 </div>
             </div>
 
             <!-- Slide 2 -->
-            <div class="carousel-item" delay="10">
+            <div class="carousel-item" delay="3">
                 <div class="carousel-container">
-                    <span class="animate__animated animate__fadeInDown"><h2>Kasus Data</h2></span>
+                    <span class="animate__animated animate__fadeInUp"><h2>Kasus Data</h2></span>
                     <span class="animate__animated animate__fadeInUp"><h2>Corona Local & Corona Global</h2></span>
                 </div>
             </div>
@@ -169,12 +174,13 @@
             </a>
 
         </div>
-    </section><!-- End Hero -->
+    </section>
+    <!-- End Hero -->
 
     <main id="main">
     <br><br><br>
     <!-- ======= Icon Boxes Section ======= -->
-    <section>
+    {{-- <section>
       <div class="main-content">
         <div class="container-fluid">
             <div class="row clearfix">
@@ -260,54 +266,280 @@
                 </div>
             </div>
         </div>
-    </div>
-    <br>
-    <section id="about" class="about">
-      <div class="col-md-12">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-              <h2>Provinsi</h2>
-          </div>
-          
-          <div class="card">
-              <div class="card-body">
-                  <div class="table-responsive">
-                      <table class="table table-striped table-bordered" id="datatable">
-                          <thead>
-                            {{-- <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
-                              <form action="">
-                                <input type="text" class="form-control" placeholder="Search.." required="">
-                                <button type="submit" class="btn btn-icon"><i class="ik ik-search"></i></button>
-                              </form>
-                          </div> --}}
-                              <tr>
-                                  <th>NO</th>
-                                  <th>PROVINSI</th>
-                                  <th>POSITIF</th>
-                                  <th>SEMBUH</th>
-                                  <th>MENINGGAL</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              @php $no=1; @endphp
-                              @foreach ($provinsi as $data)
-                                  <tr>
-                                      <td>{{ $no++ }}</td>
-                                      <td>{{ $data->nama_provinsi }}</td>
-                                      <td>{{ number_format($data->jpositif) }}</td>
-                                      <td>{{ number_format($data->jsembuh) }}</td>
-                                      <td>{{ number_format($data->jmeninggal) }}</td>
-                                  </tr>
-                              @endforeach
-                          </tbody>
-                      </table>
+    </div> --}}
+    <div class="grey-bg container-fluid">
+        <section id="minimal-statistics" class="service">
+          {{-- <div class="row">
+            <div class="col-12 mt-3 mb-1">
+              <h4 class="text-uppercase">Minimal Statistics Cards</h4>
+              <p>Statistics on minimal cards.</p>
+            </div>
+          </div> --}}
+        
+          <div class="row service">
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="media d-flex">
+                      <div class="media-body text-left">
+                        <span><h5><b>POSITIF</b></h5></span>
+                        <h1 class="warning">{{ number_format($positif) }}</h1>
+                        <small>Orang</small>
+                      </div>
+                      <div class="align-self-center">
+                        <i class="icon-graph warning font-large-2 float-right"></i>
+                      </div>
+                    </div>
+                    <div class="progress mt-1 mb-0" style="height: 7px;">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="85%"
+                      aria-valuemin="0" aria-valuemax="9999"></div>
+                    </div>
                   </div>
+                </div>
               </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="media d-flex">
+                      <div class="media-body text-left">
+                        <span><h5><b>SEMBUH</b></h5></span>
+                        <h1 class="success">{{ number_format($sembuh) }}</h1>
+                        <small>Orang</small>
+                      </div>
+                      <div class="align-self-center">
+                        <i class="icon-graph success font-large-2 float-left"></i>
+                      </div>
+                    </div>
+                    <div class="progress mt-1 mb-0" style="height: 7px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 35%" aria-valuenow="40%" aria-valuemin="0" aria-valuemax="9999"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="media d-flex">
+                      <div class="media-body text-left">
+                        <span><h5><b>MENINGGAL</b></h5></span>
+                        <h1 class="danger">{{ number_format($meninggal) }}</h1>
+                        <small>Orang</small>
+                      </div>
+                      <div class="align-self-center">
+                        <i class="icon-graph danger font-large-2 float-right"></i>
+                      </div>
+                    </div>
+                    <div class="progress mt-1 mb-0" style="height: 7px;">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="12%" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="media d-flex">
+                      <div class="media-body text-left">
+                        <span><h5><b>GLOBAL</b></h5></span>
+                        <h1 class="info"><?php echo $getglobal['value'] ?></h1>
+                        <small>Orang</small>
+                      </div>
+                      <div class="align-self-center">
+                        <i class="icon-globe info font-large-2 float-right"></i>
+                      </div>
+                    </div>
+                    <div class="progress mt-1 mb-0" style="height: 7px;">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="100%" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col text-center">
+              <h6><p>Update terakhir : {{ $tanggal }}</p></h6>
+          </div>
+          </div>
+        <!--LOCAL -->
+        <section id="contact" class="service">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Local</h2>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive service">
+                            <table class="table table-striped table-bordered table-hover mb-0 text-nowrap css-serial"
+                                id="datatable">
+                                <thead>
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>PROVINSI</th>
+                                        <th>POSITIF</th>
+                                        <th>SEMBUH</th>
+                                        <th>MENINGGAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @php $no=1; @endphp
+                                    @foreach ($provinsi as $data)
+                                        <tr>
+                                            <td>{{ $no++ }}</td>
+                                            <td>{{ $data->nama_provinsi }}</td>
+                                            <td>{{ number_format($data->jpositif) }}</td>
+                                            <td>{{ number_format($data->jsembuh) }}</td>
+                                            <td>{{ number_format($data->jmeninggal) }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Global</h2>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive service">
+                            <table class="table table-striped table-bordered table-hover mb-0 text-nowrap css-serial"
+                                id="datatable">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Negara</th>
+                                        <th>Positif</th>
+                                        <th>Sembuh</th>
+                                        <th>Meninggal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @php $no=1; @endphp
+                                    @foreach ($url as $data)
+                                        <tr>
+                                            <td>{{ $no++ }}</td>
+                                            <td>{{ $data['attributes']['Country_Region'] }}</td>
+                                            <td>{{ number_format($data['attributes']['Confirmed']) }}</td>
+                                            <td>{{ number_format($data['attributes']['Recovered']) }}</td>
+                                            <td>{{ number_format($data['attributes']['Deaths']) }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        {{-- <section id="stats-subtitle">
+        <div class="row">
+          <div class="col-12 mt-3 mb-1">
+            <h4 class="text-uppercase">Statistics With Subtitle</h4>
+            <p>Statistics on minimal cards with Title &amp; Sub Title.</p>
           </div>
         </div>
+      
+        <div class="row">
+          <div class="col-xl-6 col-md-12">
+            <div class="card overflow-hidden">
+              <div class="card-content">
+                <div class="card-body cleartfix">
+                  <div class="media align-items-stretch">
+                    <div class="align-self-center">
+                      <i class="icon-pencil primary font-large-2 mr-2"></i>
+                    </div>
+                    <div class="media-body">
+                      <h4>Total Posts</h4>
+                      <span>Monthly blog posts</span>
+                    </div>
+                    <div class="align-self-center">
+                      <h1>18,000</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-xl-6 col-md-12">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-body cleartfix">
+                  <div class="media align-items-stretch">
+                    <div class="align-self-center">
+                      <i class="icon-speech warning font-large-2 mr-2"></i>
+                    </div>
+                    <div class="media-body">
+                      <h4>Total Comments</h4>
+                      <span>Monthly blog comments</span>
+                    </div>
+                    <div class="align-self-center"> 
+                      <h1>84,695</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-xl-6 col-md-12">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-body cleartfix">
+                  <div class="media align-items-stretch">
+                    <div class="align-self-center">
+                      <h1 class="mr-2">$76,456.00</h1>
+                    </div>
+                    <div class="media-body">
+                      <h4>Total Sales</h4>
+                      <span>Monthly Sales Amount</span>
+                    </div>
+                    <div class="align-self-center">
+                      <i class="icon-heart danger font-large-2"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-xl-6 col-md-12">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-body cleartfix">
+                  <div class="media align-items-stretch">
+                    <div class="align-self-center">
+                      <h1 class="mr-2">$36,000.00</h1>
+                    </div>
+                    <div class="media-body">
+                      <h4>Total Cost</h4>
+                      <span>Monthly Cost</span>
+                    </div>
+                    <div class="align-self-center">
+                      <i class="icon-wallet success font-large-2"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> --}}
       </div>
-
-    </section>
+  
     <!-- MAPS DUNIA -->
     {{-- <section id="about" class="about">
     <div class="col-md-12">

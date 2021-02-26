@@ -32,6 +32,12 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function getCreatedAtAttribute()
+{
+    return \Carbon\Carbon::parse($this->attributes['created_at'])
+       ->format('d, M Y H:i');
+}
+
     /**
      * The attributes that should be cast to native types.
      *

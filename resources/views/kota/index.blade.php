@@ -14,7 +14,7 @@
           </div>
           <div class="card-body">
             <div class="table-responsive">
-            <table id="data_table" class="table">
+            <table id="data_table" class="table table-hover">
               <thead class="theme-dark">
                         <tr>
                           <th></th>
