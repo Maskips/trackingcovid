@@ -82,6 +82,7 @@ class ApiController extends Controller
     //BERDASARKAN KASUS DARI TIAP PROVINSI
     public function provinsi() 
     {
+        $response = Http::get('http://127.0.0.1:8000/api/provinsi')->json();
         $tampil_prov = DB::table('provinsis')
             ->join('kotas', 'kotas.id_provinsi', '=', 'provinsis.id')
             ->join('kecamatans', 'kecamatans.id_kota', '=', 'kotas.id')
