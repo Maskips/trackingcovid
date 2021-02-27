@@ -79,9 +79,9 @@
                                     <button class="btn btn-theme">Masuk</button>
                                 </div>
                             </form>
-                            <div class="register">
+                            {{-- <div class="register">
                                 <p>Belum punya Akun ? <a href="{{ route('register') }}">Buat Akun</a></p>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
