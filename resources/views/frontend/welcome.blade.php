@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>TrackingKopid | Kasus Corona</title>
+    <title>TrackingKopid | Kasus Data Covid-19 Lokal dan Global</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -528,7 +528,7 @@
                     <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box">
                             {{-- <i class="icofont-computer"></i> --}}
-                            <h4><a href="#">MEMAKAI MASKER WAJAH</a></h4>
+                            <h4><a>MEMAKAI MASKER WAJAH</a></h4>
                             <p>Gunakan masker wajah yang menutupi bagian hidung sampai dagu kemana pun kita pergi. 
                             </p>
                         </div>
@@ -537,7 +537,7 @@
                         data-aos-delay="200">
                         <div class="icon-box">
                             {{-- <i class="icofont-chart-bar-graph"></i> --}}
-                            <h4><a href="#">MENCUCI TANGAN</a></h4>
+                            <h4><a>MENCUCI TANGAN</a></h4>
                             <p>Selalu melakukan cuci tangan menggunakan sabun dengan air yang mengalir selama 20 detik.</p>
                         </div>
                     </div>
@@ -545,7 +545,7 @@
                         data-aos-delay="300">
                         <div class="icon-box">
                             {{-- <i class="icofont-image"></i> --}}
-                            <h4><a href="#">MEMAKAI HANDSANITIZER</a></h4>
+                            <h4><a>MEMAKAI HANDSANITIZER</a></h4>
                             <p>Menggunakan handsanitizer bila sudah melakukan kontak jarak dekat dengan orang lain.
                             </p>
                         </div>
@@ -554,7 +554,7 @@
                         data-aos-delay="400">
                         <div class="icon-box">
                             {{-- <i class="icofont-settings"></i> --}}
-                            <h4><a href="#">MENJAGA JARAK</a></h4>
+                            <h4><a>MENJAGA JARAK</a></h4>
                             <p>Selalu disiplin dan juga teratur dalam menjaga jarak dengan orang lain minimal 2 meter</p>
                         </div>
                     </div>
@@ -562,7 +562,7 @@
                         data-aos-delay="500">
                         <div class="icon-box">
                             {{-- <i class="icofont-earth"></i> --}}
-                            <h4><a href="#">MENJAUHI KERAMAIAN</a></h4>
+                            <h4><a>MENJAUHI KERAMAIAN</a></h4>
                             <p>Usaha kan tidak mendekati keramaian banyak orang, di sarankan untuk tetap stay di rumah.</p>
                         </div>
                     </div>
@@ -570,7 +570,7 @@
                         data-aos-delay="600">
                         <div class="icon-box">
                             {{-- <i class="icofont-tasks-alt"></i> --}}
-                            <h4><a href="#">MENJAGA IMMUNNE</a></h4>
+                            <h4><a>MENJAGA IMMUNNE</a></h4>
                             <p>Perhatikan pola makan dan tidur anda, Supaya Immunne dalamdiri kita tetap kuat untuk melawan Virus Covid-19 ini.</p>
                         </div>
                     </div>
@@ -749,7 +749,7 @@
               <li>0858-7283-7823</li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-6 footer-contact" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3 col-md-6 footer-info" data-aos="fade-up" data-aos-delay="100">
             <h4>Sosial Media : </h4>
             <p>
               <li><a class="facebook"><i class="bx bxl-facebook"></i>  Rafli Saputraa</a></li> <br>
