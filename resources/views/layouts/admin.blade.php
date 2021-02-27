@@ -105,8 +105,19 @@
                                     <a href="#"><i class="ik ik-paperclip"></i><span>Negara</span></a>
                                     <a href="#"><i class="ik ik-paperclip"></i><span>Data Kasus</span></a>
                                 </div> --}}
-                                {{-- <div class="nav-lavel"><a><span>Authentication</span></a></div>
-                                <div class="nav-item">
+                                <div class="nav-lavel"><a><span>Authentication</span></a></div>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                                {{-- <div class="nav-item">
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                     <i class="ik ik-power dropdown-icon"></i> Logout</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
