@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin2')
 
 @section('content')
 <div class="row" >
@@ -14,7 +14,7 @@
           </div>
           <div class="card-body">
             <div class="table-responsive">
-            <table id="data_table" class="table table-hover">
+              <table id="advanced_table" class="table table-hover">
               <thead class="theme-dark">
                 <tr>
                   <th></th><th></th><th></th>

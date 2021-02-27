@@ -78,8 +78,10 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    
+                    <li class="active"><a href="#">Beranda</a></li>
+                    <li><a href="#main">Data Kasus</a></li>
+                    <li><a href="#services">Pencegahan</a></li>
+                    <li><a href="#footer">Kontak</a></li>
                     {{-- <li class="drop-down"><a href="">Form Tabel</a>
                         <ul>
                             <li><a href="admin/provinsi">Provinsi</a></li>
@@ -104,66 +106,17 @@
 
           
             <!-- Slide 1 -->
-            <div class="carousel-item active" delay="3">
-                <div class="carousel-container">
-                    {{-- <a class="header-brand">
-                        <div class="animate__animated animate__fadeInDown">
-                          <h3>
-                            </h3><img src="{{ asset('assets/src/img/brand-white.svg') }}" class="header-brand-img" alt="lavalite">
-                          </h3>
-                        </div>
-                        <span class="animate__animated animate__fadeInDown">____________</span>
-                    </a> --}}
-                    <span class="animate__animated animate__fadeInUp"><h2>TrackingKopid</h2></span>
-                    {{-- <span class="animate__animated animate__fadeInUp"><h2>Corona Local & Corona Global</h2></span> --}}
-                </div>
+            <div class="carousel-item active" data-aos="fade-up" data-aos-delay="100">
+              <div class="carousel-container" data-aos="fade-down">
+                <h2 class="animate__animated animate__fadeInDown">TrackingKopid.</h2>
+                <p class="animate__animated animate__fadeInUp">Salah satu Website yang memberikan Informasi peningkatan dan penyebaran Data kasus Covid-19 Di Indonesia yang berdasarkan Provinsi dan juga Data kasus Covid-19 di berbagai Dunia.</p>
+              </div>
             </div>
+
 
             <!-- Slide 2 -->
-            <div class="carousel-item" delay="3">
-                <div class="carousel-container">
-                    <span class="animate__animated animate__fadeInUp"><h2>Kasus Data</h2></span>
-                    <span class="animate__animated animate__fadeInUp"><h2>Corona Local & Corona Global</h2></span>
-                </div>
-            </div>
 
-            <!-- Slide 3 -->
-            {{-- <div class="carousel-item" data-aos-delay="20">
-                <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown"><span>KASUS MENINGGAL</span></h2>
-                    <h2 class="animate__animated animate__fadeInUp"><span>{{ number_format($meninggal) }}</span>
-                    </h2>
-                    <p class="animate__animated animate__fadeInUp">ORANG</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-aos-delay="20">
-                <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown"><span>KASUS SEMBUH</span></h2>
-                    <h2 class="animate__animated animate__fadeInUp"><span>{{ number_format($sembuh) }}</span></h2>
-                    <p class="animate__animated animate__fadeInUp">ORANG</p>
-                </div>
-            </div> --}}
-
-            <!-- <div class="carousel-item">
-                <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown"><span>KASUS LOKAL</span></h2>
-                    <h2 class="animate__animated animate__fadeInUp"><span><?php ?><span>
-                    </h2>
-                    <p class="animate__animated animate__fadeInUp">ORANG</p>
-                </div>
-            </div> -->
-
-            {{-- <div class="carousel-item">
-                <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown"><span>KASUS GLOBAL</span></h2>
-                    <h2 class="animate__animated animate__fadeInUp"><span><?php {{ $getglobal }} ?></span></h2>
-                    </h2>
-                    <p class="animate__animated animate__fadeInUp">ORANG</p>
-                </div>
-            </div> --}}
-
-            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            {{-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
@@ -171,7 +124,7 @@
             <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
-            </a>
+            </a> --}}
 
         </div>
     </section>
@@ -349,7 +302,7 @@
                     <div class="media d-flex">
                       <div class="media-body text-left">
                         <span><h5><b>GLOBAL</b></h5></span>
-                        <h1 class="info">00000000</h1>
+                        <h1 class="info"><?php echo $getglobal['value'] ?></h1>
                         <small>Orang</small>
                       </div>
                       <div class="align-self-center">
@@ -363,17 +316,17 @@
                 </div>
               </div>
             </div>
-            <div class="col text-center">
-              <h6><p>Update terakhir : {{ $tanggal }}</p></h6>
-          </div>
-          </div>
+          {{-- <div class="col text-center">
+            <h6><p>Update terakhir : {{ $tanggal }}</p></h6>
+          </div> --}}
+        </div>
         <!--LOCAL -->
         <section id="contact" class="service">
           
             <div class="col-md-12">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
-                    <h2>Local</h2>
+                    <h2>Kasus Local</h2>
                 </div>
                 <div class="card">
                     <div class="card-body">
@@ -408,9 +361,9 @@
             </div>
           </div>
             <br><br>
-            {{-- <div class="container" data-aos="fade-up">
+            <div class="container" data-aos="fade-up">
                 <div class="section-title">
-                    <h2>Global</h2>
+                    <h2>Kasus Global</h2>
                 </div>
                 <div class="card">
                     <div class="card-body">
@@ -442,7 +395,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
         </section>
         
         {{-- <section id="stats-subtitle">
@@ -563,74 +516,68 @@
         <!-- End Icon Boxes Section -->
 
         <!-- ======= Services Section ======= -->
-        {{-- <section id="services" class="services">
+        <section id="services" class="services">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Services</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2>Pencegahan virus covid-19</h2>
+                    <p>Virus Covid-19 bukanlah Virus yang seperti pada umum nya, Virus ini adalah jenis Virus yang dapat menyebar dengan cepat melalui udara.Dibawah ini adalah cara Pencegahan agar terjauh dari Virus Covid-19.</p>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box">
-                            <i class="icofont-computer"></i>
-                            <h4><a href="#">Lorem Ipsum</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                occaecati cupiditate non provident</p>
+                            {{-- <i class="icofont-computer"></i> --}}
+                            <h4><a href="#">MEMAKAI MASKER WAJAH</a></h4>
+                            <p>Gunakan masker wajah yang menutupi bagian hidung sampai dagu kemana pun kita pergi. 
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up"
                         data-aos-delay="200">
                         <div class="icon-box">
-                            <i class="icofont-chart-bar-graph"></i>
-                            <h4><a href="#">Dolor Sitema</a></h4>
-                            <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat tarad limino ata</p>
+                            {{-- <i class="icofont-chart-bar-graph"></i> --}}
+                            <h4><a href="#">MENCUCI TANGAN</a></h4>
+                            <p>Selalu melakukan cuci tangan menggunakan sabun dengan air yang mengalir selama 20 detik.</p>
                         </div>
                     </div>
                     <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up"
                         data-aos-delay="300">
                         <div class="icon-box">
-                            <i class="icofont-image"></i>
-                            <h4><a href="#">Sed ut perspiciatis</a></h4>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur</p>
+                            {{-- <i class="icofont-image"></i> --}}
+                            <h4><a href="#">MEMAKAI HANDSANITIZER</a></h4>
+                            <p>Menggunakan handsanitizer bila sudah melakukan kontak jarak dekat dengan orang lain.
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up"
                         data-aos-delay="400">
                         <div class="icon-box">
-                            <i class="icofont-settings"></i>
-                            <h4><a href="#">Nemo Enim</a></h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                                anim id est laborum</p>
+                            {{-- <i class="icofont-settings"></i> --}}
+                            <h4><a href="#">MENJAGA JARAK</a></h4>
+                            <p>Selalu disiplin dan juga teratur dalam menjaga jarak dengan orang lain minimal 2 meter</p>
                         </div>
                     </div>
                     <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up"
                         data-aos-delay="500">
                         <div class="icon-box">
-                            <i class="icofont-earth"></i>
-                            <h4><a href="#">Magni Dolore</a></h4>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                                voluptatum deleniti atque</p>
+                            {{-- <i class="icofont-earth"></i> --}}
+                            <h4><a href="#">MENJAUHI KERAMAIAN</a></h4>
+                            <p>Usaha kan tidak mendekati keramaian banyak orang, di sarankan untuk tetap stay di rumah.</p>
                         </div>
                     </div>
                     <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up"
                         data-aos-delay="600">
                         <div class="icon-box">
-                            <i class="icofont-tasks-alt"></i>
-                            <h4><a href="#">Eiusmod Tempor</a></h4>
-                            <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta
-                                nobis est eligendi</p>
+                            {{-- <i class="icofont-tasks-alt"></i> --}}
+                            <h4><a href="#">MENJAGA IMMUNNE</a></h4>
+                            <p>Perhatikan pola makan dan tidur anda, Supaya Immunne dalamdiri kita tetap kuat untuk melawan Virus Covid-19 ini.</p>
                         </div>
                     </div>
                 </div>
 
             </div>
-        </section> --> --}}
+        </section> 
         <!-- End Services Section -->
 
         <!-- ======= Cta Section ======= -->
@@ -741,162 +688,84 @@
         <!-- ======= Contact Section ======= -->
         {{-- <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
-
                 <div class="section-title">
-                    <h2>Contact Us</h2>
+                    <h2>Kontak</h2>
                 </div>
-
-                <div class="row mt-1 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="100">
-
+                <div class="col mt-1 d-flex justify-center" data-aos="fade-right" data-aos-delay="100">
                     <div class="col-lg-5">
                         <div class="info">
                             <div class="address">
                                 <i class="icofont-google-map"></i>
-                                <h4>Location:</h4>
-                                <p>A108 Adam Street, New York, NY 535022</p>
+                                <h4>Lokasi :</h4>
+                                <p>SMK Assalaam, Jln. Terusan SituTarate Cibaduyut, BANDUNG</p>
                             </div>
 
                             <div class="email">
                                 <i class="icofont-envelope"></i>
                                 <h4>Email:</h4>
-                                <p>info@example.com</p>
+                                <p>rafli_241@smkassalaam.sch.id</p>
                             </div>
 
                             <div class="phone">
                                 <i class="icofont-phone"></i>
-                                <h4>Call:</h4>
-                                <p>+1 5589 55488 55s</p>
+                                <h4>No.telp</h4>
+                                <p>0858-7283-7823</p>
                             </div>
-
                         </div>
-
                     </div>
-
-                    <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
-
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                            <div class="form-row">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name"
-                                        placeholder="Your Name" data-rule="minlen:4"
-                                        data-msg="Please enter at least 4 chars" />
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email" data-rule="email"
-                                        data-msg="Please enter a valid email" />
-                                    <div class="validate"></div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="subject" id="subject"
-                                    placeholder="Subject" data-rule="minlen:4"
-                                    data-msg="Please enter at least 8 chars of subject" />
-                                <div class="validate"></div>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" name="message" rows="5" data-rule="required"
-                                    data-msg="Please write something for us" placeholder="Message"></textarea>
-                                <div class="validate"></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
-                        </form>
-
-                    </div>
-
                 </div>
-
             </div>
-        </section> --> --}}
+        </section> --}}
         <!-- End Contact Section -->
 
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
-
-        <!-- <div class="footer-newsletter">
-      <div class="container">
+      
+    <div class="footer-top">
+      
+      <div class="container" data-aos="fade-down">
+        <div class="section-title">
+          <h1><b>KONTAK SAYA</b></h1>
+      </div>
+      <br><br>
         <div class="row">
-          <div class="col-lg-6">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="100">
+            <h4>LOKASI :</h4>
+            <ul>
+              <li>Jalan.Sadang, Margahayu Tengah, BANDUNG</li>
+            </ul>
           </div>
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+          <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="100">
+            <h4>EMAIL :</h4>
+            <ul>
+              <li>rafli_241@smkassalaam.sch.id</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="100">
+            <h4>NO.TELP :</h4>
+            <ul>
+              <li>0858-7283-7823</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-contact" data-aos="fade-up" data-aos-delay="100">
+            <h4>Sosial Media : </h4>
+            <p>
+              <li><a class="facebook"><i class="bx bxl-facebook"></i>  Rafli Saputraa</a></li> <br>
+              <li><a class="instagram"><i class="bx bxl-instagram"></i>  _raflisaputraa</a></li> <br>
+            </p>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>About Anyar</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div> -->
 
         <div class="container">
             <div class="copyright">
                 &copy; Copyright <strong><span>TrackingKopid</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
-                Designed by Maskips
+                Designed by <b>Maskips</b>
             </div>
         </div>
     </footer><!-- End Footer -->
