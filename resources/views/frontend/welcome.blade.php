@@ -408,7 +408,7 @@
             </div>
           </div>
             <br><br>
-            <div class="container" data-aos="fade-up">
+            {{-- <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Global</h2>
                 </div>
@@ -442,7 +442,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </section>
         
         {{-- <section id="stats-subtitle">
