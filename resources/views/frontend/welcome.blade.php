@@ -238,8 +238,8 @@
                       <div class="media-body text-left">
                         <span><h5><b>POSITIF</b></h5></span>
                         <h1 class="warning">
-                          {{-- {{ number_format($positif) }} --}}
-                          1,334,634
+                          {{ number_format($positif) }}
+                          
                         </h1>
                         <small>Orang</small>
                       </div>
@@ -263,8 +263,8 @@
                       <div class="media-body text-left">
                         <span><h5><b>SEMBUH</b></h5></span>
                         <h1 class="success">
-                          {{-- {{ number_format($sembuh) }} --}}
-                          1,142,703
+                          {{ number_format($sembuh) }}
+                          
                         </h1>
                         <small>Orang</small>
                       </div>
@@ -288,8 +288,8 @@
                       <div class="media-body text-left">
                         <span><h5><b>MENINGGAL</b></h5></span>
                         <h1 class="danger">
-                          {{-- {{ number_format($meninggal) }} --}}
-                          36,166
+                          {{ number_format($meninggal) }}
+                          
                         </h1>
                         <small>Orang</small>
                       </div>
