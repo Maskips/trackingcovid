@@ -24,7 +24,7 @@ Route::resource('/', WelcomeController::class);
 use App\Http\Controllers\Welcome2Controller;
 Route::resource('/ke2', Welcome2Controller::class);
 
-Auth::routes();
+Auth::routes(['register'=> false,'reset'=>false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

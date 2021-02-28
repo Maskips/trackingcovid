@@ -312,7 +312,6 @@
                       <div class="media-body text-left">
                         <span><h5><b>GLOBAL</b></h5></span>
                         <h1 class="info">
-                          113,826,206
                           {{-- <?php echo $getglobal['value'] ?> --}}
                         </h1>
                         <small>Orang</small>
