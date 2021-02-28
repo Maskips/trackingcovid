@@ -44,12 +44,12 @@ class WelcomeController extends Controller
                 ->groupBy('nama_provinsi','kode_provinsi')
                 ->get();
 
-        $url = Http::get('https://api.kawalcorona.com/')->json();
-        $global = file_get_contents('https://api.kawalcorona.com/positif');
-        $getglobal = json_decode($global, TRUE);
+        // $url = Http::get('https://api.kawalcorona.com/')->json();
+        // $global = file_get_contents('https://api.kawalcorona.com/positif');
+        // $getglobal = json_decode($global, TRUE);
         
         $tanggal = Carbon::now()->format(' d F Y, H:i');
 
-        return view('frontend.welcome', compact('positif', 'sembuh', 'meninggal', 'provinsi', 'tanggal', 'global', 'getglobal', 'url'));
+        return view('frontend.welcome', compact('positif', 'sembuh', 'meninggal', 'provinsi', 'tanggal'));
     }
 }

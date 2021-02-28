@@ -237,7 +237,10 @@
                     <div class="media d-flex">
                       <div class="media-body text-left">
                         <span><h5><b>POSITIF</b></h5></span>
-                        <h1 class="warning">{{ number_format($positif) }}</h1>
+                        <h1 class="warning">
+                          {{-- {{ number_format($positif) }} --}}
+                          1,334,634
+                        </h1>
                         <small>Orang</small>
                       </div>
                       <div class="align-self-center">
@@ -259,7 +262,10 @@
                     <div class="media d-flex">
                       <div class="media-body text-left">
                         <span><h5><b>SEMBUH</b></h5></span>
-                        <h1 class="success">{{ number_format($sembuh) }}</h1>
+                        <h1 class="success">
+                          {{-- {{ number_format($sembuh) }} --}}
+                          1,142,703
+                        </h1>
                         <small>Orang</small>
                       </div>
                       <div class="align-self-center">
@@ -281,7 +287,10 @@
                     <div class="media d-flex">
                       <div class="media-body text-left">
                         <span><h5><b>MENINGGAL</b></h5></span>
-                        <h1 class="danger">{{ number_format($meninggal) }}</h1>
+                        <h1 class="danger">
+                          {{-- {{ number_format($meninggal) }} --}}
+                          36,166
+                        </h1>
                         <small>Orang</small>
                       </div>
                       <div class="align-self-center">
@@ -302,7 +311,10 @@
                     <div class="media d-flex">
                       <div class="media-body text-left">
                         <span><h5><b>GLOBAL</b></h5></span>
-                        <h1 class="info"><?php echo $getglobal['value'] ?></h1>
+                        <h1 class="info">
+                          113,826,206
+                          {{-- <?php echo $getglobal['value'] ?> --}}
+                        </h1>
                         <small>Orang</small>
                       </div>
                       <div class="align-self-center">
@@ -361,12 +373,13 @@
             </div>
           </div>
             <br><br>
-            <div class="container" data-aos="fade-up">
+            {{-- <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Kasus Global</h2>
                 </div>
                 <div class="card">
                     <div class="card-body">
+                      <div class="table-wrapper-scrool-y my-custom-scroollbar col-lg-12">
                         <div class="table-responsive service">
                             <table class="table table-striped table-bordered table-hover mb-0 text-nowrap css-serial"
                                 id="datatable">
@@ -393,9 +406,10 @@
                                 </tbody>
                             </table>
                         </div>
+                      </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </section>
         
         {{-- <section id="stats-subtitle">
